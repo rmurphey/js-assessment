@@ -1,0 +1,3 @@
+server = require('../server/server.js');
+
+server({ port : 4444, dev : true });
