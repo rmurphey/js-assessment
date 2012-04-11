@@ -29,6 +29,9 @@ you should do your best to add tests to the appropriate file in `tests/app`, or
 create a new file there if you don't see an appropriate one. If you do create
 a new file, make sure to add it to `tests/runner.js`.
 
+Any substantial contributions will be duly credited in the readme, as well as
+of course in the git commit log.
+
 ### Data-driven tests
 
 If your tests need data that can be fetched via XHR, stick a `.json` file in
@@ -49,8 +52,9 @@ right direction.
 ## I hate \<some technology you've chosen\>
 
 This repo uses RequireJS for dependency management and Mocha and expect.js for
-the tests themselves. If this doesn't suit you, please fork away, or, better,
-submit a pull request that lets this be more flexible than it currently is.
+the tests themselves. It uses the BDD style for authoring tests. If this doesn't suit
+you, please fork away, or, better, submit a pull request that lets this be more
+flexible than it currently is.
 
 
 # License
