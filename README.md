@@ -34,7 +34,7 @@ a new file, make sure to add it to `tests/runner.js`.
 If your tests need data that can be fetched via XHR, stick a `.json` file in
 the `data` directory; you can access it at `/data/<filename>.json`.
 
-## Available dependencies
+### Available dependencies
 
 The repo includes Backbone, Underscore, and RequireJS. If there's other stuff
 you'd find useful, you can put it in the `lib` directory.
