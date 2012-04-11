@@ -20,7 +20,9 @@ You can then view the tests in your browser at
 
 When you visit that page, all of the tests should be failing; your job is to
 get the tests to pass. To do this, you'll need to edit the files in the
-`tests/app` directory.
+`tests/app` directory. The tests have inline comments that should point you in
+the right direction; once you update a test, you can reload the test page in
+the browser to see whether it worked.
 
 ## I want to contribute tests; what do I do?
 
@@ -51,22 +53,31 @@ right direction.
 
 ## I hate \<some technology you've chosen\>
 
-This repo uses RequireJS for dependency management and Mocha and expect.js for
-the tests themselves. It uses the BDD style for authoring tests. If this doesn't suit
-you, please fork away, or, better, submit a pull request that lets this be more
-flexible than it currently is.
+This repo uses [RequireJS](http://requirejs.org) for dependency management and
+[Mocha](http://visionmedia.github.com/mocha/) and [expect.js](https://github.com/LearnBoost/expect.js/blob/master/README.md)
+for the tests themselves. It uses the BDD style for authoring tests. If this
+doesn't suit you, please fork away, or, better, submit a pull request that lets
+this be more flexible than it currently is.
 
+# Todos
+
+- Command line runner
 
 # License
 
-Copyright &copy; 2012 Rebecca Murphey
+Copyright &copy; 2012 Rebecca Murphey.
 
 This work is licensed under the [Creative Commons Attribution-Share Alike 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
 license. You are free to share and remix the work, and to use it for commercial
 purposes under the following conditions:
 
-- Attribution — You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).
-- Share Alike — If you alter, transform, or build upon this work, you may distribute the resulting work only under the same or similar license to this one.
+- *Attribution* — You must attribute the work in the manner specified by the
+  author or licensor (but not in any way that suggests that they endorse you or
+  your use of the work).
+- *Share Alike* — If you alter, transform, or build upon this work, you may
+  distribute the resulting work only under the same or similar license to this
+  one.
 
 Any of these conditions can be waived if you get permission from the copyright
 holder.
+
