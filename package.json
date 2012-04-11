@@ -1,12 +1,12 @@
 {
   "author": "Rebecca Murphey <rmurphey@gmail.com> (http://rmurphey.com)",
-  "name": "app-structure",
-  "description": "A demo app showing app structuring techniques",
+  "name": "js-interview",
+  "description": "A structure for creating a test-driven JS interview",
   "version": "0.0.0",
   "homepage": "http://rmurphey.com",
   "repository": {
     "type": "git",
-    "url": "git://github.com/rmurphey/app-structure.git"
+    "url": "git://github.com/rmurphey/js-interview.git"
   },
   "engines": {
     "node": "~0.6.8"
