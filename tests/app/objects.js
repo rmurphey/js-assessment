@@ -25,12 +25,12 @@ define([ 'use!underscore' ], function(_) {
       };
     });
 
-    it("should be able to alter the context in which a method runs", function() {
+    it("you should be able to alter the context in which a method runs", function() {
       // define a function for fn so that the following will pass
       expect(fn()).to.be('Yo, Rebecca!');
     });
 
-    it("should be able to alter multiple objects at once", function() {
+    it("you should be able to alter multiple objects at once", function() {
       // define a function for fn so that the following will pass
       var obj1 = new C('Rebecca'),
           obj2 = new C('Melissa'),

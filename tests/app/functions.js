@@ -5,12 +5,12 @@ define([ 'use!underscore' ], function(_) {
         },
         fn = function() {};
 
-    it("should be possible to use an array of arguments to call a function", function() {
+    it("you should be able to use an array as arguments when calling a function", function() {
       var result = fn([ 'Hello', 'Ellie', '!' ]);
       expect(result).to.be('Hello, Ellie!');
     });
 
-    it("should be possible to change the context in which a function is called", function() {
+    it("you should be able to change the context in which a function is called", function() {
       var speak = function() {
             sayIt(this.greeting, this.name, '!!!');
           },
@@ -24,12 +24,12 @@ define([ 'use!underscore' ], function(_) {
       expect(fn()).to.be('Hello, Rebecca!');
     });
 
-    it("should be possible to return a function from a function", function() {
+    it("you should be able to return a function from a function", function() {
       // define a function for fn so that the following will pass
       expect(fn('Hello')('world')).to.be('Hello, world');
     });
 
-    it("should be possible to declare a 'partial' function", function() {
+    it("you should be able to create a 'partial' function", function() {
       // define a function for fn so that the following will pass
       var partial = fn(sayIt, 'Hello', 'Ellie');
       expect(partial('!!!')).to.be('Hello, Ellie!!!');

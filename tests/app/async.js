@@ -6,7 +6,7 @@ define([ 'jquery', 'use!underscore' ], function($, _) {
 
     });
 
-    it("should return a promise that resolves true", function(done) {
+    it("you should understand how to uses 'promises'", function(done) {
       var flag = false;
 
       fn = function() {
@@ -20,7 +20,7 @@ define([ 'jquery', 'use!underscore' ], function($, _) {
       });
     });
 
-    it("should receive and manipulate data from the server", function(done) {
+    it("you should be able to receive data from the server and manipulate it", function(done) {
       var peopleArray,
           url = '/data/testdata.json',
 
