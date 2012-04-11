@@ -1,0 +1,9 @@
+{
+  "people" : [
+    { "name" : "Matt" },
+    { "name" : "Rebecca" },
+    { "name" : "Paul" },
+    { "name" : "Alex" },
+    { "name" : "Adam" }
+  ]
+}
