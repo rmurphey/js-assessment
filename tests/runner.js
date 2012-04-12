@@ -5,7 +5,9 @@ var tests = [
   'tests/app/objects',
   'tests/app/functions',
   'tests/app/async',
-  'tests/app/views'
+  'tests/app/views',
+  'tests/app/flowControl',
+  'tests/app/modules',
 ];
 
 require(tests, function() {
