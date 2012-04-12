@@ -1,9 +1,9 @@
 define([ 'jquery', 'use!underscore' ], function($, _) {
   describe("async behavior", function() {
-    var promise, fn = function() { };
+    var promise, fn;
 
     beforeEach(function() {
-
+      fn = function() { };
     });
 
     it("you should understand how to uses 'promises'", function(done) {
@@ -36,7 +36,5 @@ define([ 'jquery', 'use!underscore' ], function($, _) {
 
       tests();
     });
-
   });
-
 });

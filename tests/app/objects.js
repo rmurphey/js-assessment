@@ -43,5 +43,14 @@ define([ 'use!underscore' ], function(_) {
       expect(new C('Ellie').greeting).to.be(greeting);
     });
 
+    it("you should be able to iterate over an object's properties", function() {
+      // define a function for fn so that the following will pass
+      var obj = {
+        foo : 'bar',
+        baz : 'bim'
+      };
+
+      expect(fn()).to.eql([ 'foo: bar', 'baz: bim' ]);
+    });
   });
 });
