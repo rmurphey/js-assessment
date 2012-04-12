@@ -24,7 +24,7 @@ define([ 'use!underscore' ], function(_) {
 
     it("you should be able to remove an item from an array", function() {
       // define a function for fn so that the following will pass
-      var result = fn(a);
+      var result = fn(a, 2);
       expect(result).to.have.length(3);
       expect(result.join(' ')).to.be('1 3 4');
     });
