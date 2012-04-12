@@ -1,7 +1,7 @@
 {
   "author": "Rebecca Murphey <rmurphey@gmail.com> (http://rmurphey.com)",
   "name": "js-assessment",
-  "description": "A structure for creating a test-driven JS interview",
+  "description": "A test-driven assessment of JavaScript skills",
   "version": "0.0.0",
   "homepage": "http://rmurphey.com",
   "repository": {
