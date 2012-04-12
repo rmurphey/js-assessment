@@ -1,12 +1,12 @@
 {
   "author": "Rebecca Murphey <rmurphey@gmail.com> (http://rmurphey.com)",
-  "name": "js-interview",
+  "name": "js-assessment",
   "description": "A structure for creating a test-driven JS interview",
   "version": "0.0.0",
   "homepage": "http://rmurphey.com",
   "repository": {
     "type": "git",
-    "url": "git://github.com/rmurphey/js-interview.git"
+    "url": "git://github.com/rmurphey/js-assessment.git"
   },
   "engines": {
     "node": "~0.6.8"
@@ -20,5 +20,8 @@
   "devDependencies": {
     "mocha" : "1.0.x",
     "requirejs" : "1.0.x"
+  },
+  "scripts": {
+    "start": "node bin/serve"
   }
 }
