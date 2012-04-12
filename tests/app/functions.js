@@ -21,7 +21,7 @@ define([ 'use!underscore' ], function(_) {
 
       // define a function for fn that calls the speak function such that the
       // following test will pass
-      expect(fn()).to.be('Hello, Rebecca!');
+      expect(fn()).to.be('Hello, Rebecca!!!');
     });
 
     it("you should be able to return a function from a function", function() {
