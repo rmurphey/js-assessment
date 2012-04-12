@@ -12,7 +12,7 @@ define([ 'use!underscore' ], function(_) {
 
     it("you should be able to change the context in which a function is called", function() {
       var speak = function() {
-            sayIt(this.greeting, this.name, '!!!');
+            return sayIt(this.greeting, this.name, '!!!');
           },
           obj = {
             greeting : 'Hello',
