@@ -43,14 +43,18 @@ define([ 'use!underscore' ], function(_) {
       expect(new C('Ellie').greeting).to.be(greeting);
     });
 
-    it("you should be able to iterate over an object's properties", function() {
+    it("you should be able to iterate over an object's 'own' properties", function() {
       // define a function for fn so that the following will pass
-      var obj = {
-        foo : 'bar',
-        baz : 'bim'
+      var C = function() {
+        this.foo = 'bar';
+        this.baz = 'bim';
       };
 
-      expect(fn()).to.eql([ 'foo: bar', 'baz: bim' ]);
+      C.prototype.bop = 'bip';
+
+      var obj = new C();
+
+      expect(fn(obj)).to.eql([ 'foo: bar', 'baz: bim' ]);
     });
   });
 });
