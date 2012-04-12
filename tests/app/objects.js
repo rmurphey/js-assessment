@@ -9,8 +9,8 @@ define([ 'use!underscore' ], function(_) {
         name : 'Matt',
         greeting : 'Hello',
         sayIt : function() {
-          return  this.name + ', ' +
-                  this.greeting + '!';
+          return  this.greeting + ', ' +
+                  this.name + '!';
         }
       };
 
