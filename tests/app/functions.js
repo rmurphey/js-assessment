@@ -69,5 +69,22 @@ define([ 'use!underscore' ], function(_) {
       expect(fn(curryMe2, 12, 3)(5)).to.be(20);
       expect(fn(curryMe2, 12, 3, 5)()).to.be(20);
     });
+
+    it('you should be able to use closure', function () {
+      var arr = [54, 2345, 32, 45, 127];
+      var doSomeStuff;
+
+      fn = function (vals) {
+        // define a function for fn so that the following will pass
+      };
+
+      doSomeStuff = function (x) { console.log(x); return x * x; };
+
+      var funcs = fn(arr);
+      expect(funcs).to.have.length(5);
+      for (var i = funcs.length - 1; i >= 0; i--) {
+        expect(funcs[i]()).to.be(doSomeStuff(arr[i]));
+      };
+    });
   });
 });
