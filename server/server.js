@@ -22,7 +22,10 @@ module.exports = function(opts) {
     fs.createReadStream(opts.baseDir + 'tests/runner.html').pipe(res);
   });
 
-  // Actually listen
   site.listen(opts.port);
-  console.log("Serving at http://localhost:" + opts.port);
+
+  fs.readFile(opts.baseDir + 'help.txt', 'utf-8', function(err, f) {
+    console.log(f.replace('{{port}}', opts.port));
+    console.log("\n\nServing at http://localhost:" + opts.port);
+  });
 };
