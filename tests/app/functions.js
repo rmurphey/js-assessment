@@ -34,5 +34,40 @@ define([ 'use!underscore' ], function(_) {
       var partial = fn(sayIt, 'Hello', 'Ellie');
       expect(partial('!!!')).to.be('Hello, Ellie!!!');
     });
+
+    it("you should be able to use arguments", function () {
+      // define a function for fn so that the following will pass
+
+      //sum all arguments that are passed to the function
+      expect(fn(1)).to.be(1);
+      expect(fn(1, 2)).to.be(3);
+      expect(fn(1, 2, 3)).to.be(6);
+      expect(fn(1, 2, 3, 4)).to.be(10);
+      expect(fn(1, 2, 3, 4, 5)).to.be(15);
+      expect(fn(1, 2, 3, 4, 5, 6)).to.be(21);
+      expect(fn(54, 6, 543, 6543, 32, 321)).to.be(7499);
+    });
+
+    it("you should be able to curry existing functions", function () {
+      // define a function for fn so that the following will pass
+
+      var curryMe1 = function (name, surname, company) { 
+        return "Hey! I'm " + name + " " + surname + " from " + company; 
+      };
+
+      expect(fn(curryMe1)("Mark", "Zuckerberg", "Facebook")).to.be("Hey! I'm Mark Zuckerberg from Facebook");
+      expect(fn(curryMe1, "Mark")("Zuckerberg", "Facebook")).to.be("Hey! I'm Mark Zuckerberg from Facebook");
+      expect(fn(curryMe1, "Mark", "Zuckerberg")("Facebook")).to.be("Hey! I'm Mark Zuckerberg from Facebook");
+      expect(fn(curryMe1, "Mark", "Zuckerberg", "Facebook")()).to.be("Hey! I'm Mark Zuckerberg from Facebook");
+
+      var curryMe2 = function (x, y, z) {
+        return x / y * z;
+      };
+
+      expect(fn(curryMe2)(12, 3, 5)).to.be(20);
+      expect(fn(curryMe2, 12)(3, 5)).to.be(20);
+      expect(fn(curryMe2, 12, 3)(5)).to.be(20);
+      expect(fn(curryMe2, 12, 3, 5)()).to.be(20);
+    });
   });
 });
