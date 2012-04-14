@@ -17,9 +17,7 @@ define([ 'use!underscore' ], function(_) {
         // 'fizzbuzz';
         // otherwise the function should return the number
 
-        r = n % 3 ? "" : "fizz";
-        r += n % 5 ? "" : "buzz";
-        return r || n;
+        return  ((n % 3 ? "" : "fizz") + (n % 5 ? "" : "buzz")) || n;
       };
 
       // replace the following test with tests that prove your function works
