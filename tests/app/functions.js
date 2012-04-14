@@ -36,49 +36,44 @@ define([ 'use!underscore' ], function(_) {
     });
 
     it("you should be able to use arguments", function () {
-      // define a function for fn so that the following will pass
+      fn = function () {
+        // you can only edit function body here
+      };
 
-      //sum all arguments that are passed to the function
-      expect(fn(1)).to.be(1);
-      expect(fn(1, 2)).to.be(3);
-      expect(fn(1, 2, 3)).to.be(6);
-      expect(fn(1, 2, 3, 4)).to.be(10);
-      expect(fn(1, 2, 3, 4, 5)).to.be(15);
-      expect(fn(1, 2, 3, 4, 5, 6)).to.be(21);
-      expect(fn(54, 6, 543, 6543, 32, 321)).to.be(7499);
+      var a = Math.random(), b = Math.random(), c = Math.random(), d = Math.random();
+      expect(fn(a)).to.be(a);
+      expect(fn(a, b)).to.be(a + b);
+      expect(fn(a, b, c)).to.be(a + b + c);
+      expect(fn(a, b, c, d)).to.be(a + b + c + d);
     });
 
     it("you should be able to curry existing functions", function () {
-      // define a function for fn so that the following will pass
-
-      var curryMe1 = function (name, surname, company) { 
-        return "Hey! I'm " + name + " " + surname + " from " + company; 
+      fn = function (fun) {
+        // you can only edit function body here
       };
 
-      expect(fn(curryMe1)("Mark", "Zuckerberg", "Facebook")).to.be("Hey! I'm Mark Zuckerberg from Facebook");
-      expect(fn(curryMe1, "Mark")("Zuckerberg", "Facebook")).to.be("Hey! I'm Mark Zuckerberg from Facebook");
-      expect(fn(curryMe1, "Mark", "Zuckerberg")("Facebook")).to.be("Hey! I'm Mark Zuckerberg from Facebook");
-      expect(fn(curryMe1, "Mark", "Zuckerberg", "Facebook")()).to.be("Hey! I'm Mark Zuckerberg from Facebook");
-
-      var curryMe2 = function (x, y, z) {
+      var curryMe = function (x, y, z) {
         return x / y * z;
       };
 
-      expect(fn(curryMe2)(12, 3, 5)).to.be(20);
-      expect(fn(curryMe2, 12)(3, 5)).to.be(20);
-      expect(fn(curryMe2, 12, 3)(5)).to.be(20);
-      expect(fn(curryMe2, 12, 3, 5)()).to.be(20);
+      var a = Math.random(), b = Math.random(), c = Math.random();
+      expect(fn(curryMe)(a, b, c)).to.be(curryMe(a, b, c));
+      expect(fn(curryMe, a)(b, c)).to.be(curryMe(a, b, c));
+      expect(fn(curryMe, a, b)(c)).to.be(curryMe(a, b, c));
+      expect(fn(curryMe, a, b, c)()).to.be(curryMe(a, b, c));
+      expect(fn(curryMe, a, b, c)()).to.be(curryMe(a, b, c));
+      expect(fn(curryMe, b, a, c)()).to.be(curryMe(b, a, c));
     });
 
-    it('you should be able to use closure', function () {
-      var arr = [54, 2345, 32, 45, 127];
+    it('you should be able to use closures', function () {
+      var arr = [Math.random(), Math.random(), Math.random(), Math.random()];
       var doSomeStuff;
 
       fn = function (vals) {
-        // define a function for fn so that the following will pass
+        // you can only edit function body here
       };
 
-      doSomeStuff = function (x) { console.log(x); return x * x; };
+      doSomeStuff = function (x) { return x * x; };
 
       var funcs = fn(arr);
       expect(funcs).to.have.length(5);
