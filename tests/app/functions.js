@@ -47,6 +47,38 @@ define([ 'use!underscore' ], function(_) {
       expect(fn(a, b, c, d)).to.be(a + b + c + d);
     });
 
+    it("you should be able to apply functions", function () {
+      fn = function (fun) {
+        // you can only edit function body here
+      };
+
+      (function () {
+        var a = Math.random(), b = Math.random(), c = Math.random();
+
+        var wasITake2ArgumentsCalled = false;
+        var iTake2Arguments = function (firstArgument, secondArgument) {
+          expect(arguments.length).to.be(2);
+          expect(firstArgument).to.be(a);
+          expect(secondArgument).to.be(b);
+
+          wasITake2ArgumentsCalled = true;
+        };
+
+        var wasITake3ArgumentsCalled = false;
+        var iTake3Arguments = function (firstArgument, secondArgument, thirdArgument) {
+          expect(arguments.length).to.be(3);
+          expect(firstArgument).to.be(a);
+          expect(secondArgument).to.be(b);
+          expect(thirdArgument).to.be(c);
+
+          wasITake3ArgumentsCalled = true;
+        };
+
+        fn(iTake2Arguments, a, b);
+        fn(iTake3Arguments, a, b, c);
+      })();
+    });
+
     it("you should be able to curry existing functions", function () {
       fn = function (fun) {
         // you can only edit function body here
