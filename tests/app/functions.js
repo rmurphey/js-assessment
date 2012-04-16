@@ -98,7 +98,7 @@ define([ 'use!underscore' ], function(_) {
     });
 
     it('you should be able to use closures', function () {
-      var arr = [Math.random(), Math.random(), Math.random(), Math.random()];
+      var arr = [ Math.random(), Math.random(), Math.random(), Math.random() ];
       var doSomeStuff;
 
       fn = function (vals) {
@@ -108,7 +108,7 @@ define([ 'use!underscore' ], function(_) {
       doSomeStuff = function (x) { return x * x; };
 
       var funcs = fn(arr);
-      expect(funcs).to.have.length(5);
+      expect(funcs).to.have.length(arr.length);
       for (var i = funcs.length - 1; i >= 0; i--) {
         expect(funcs[i]()).to.be(doSomeStuff(arr[i]));
       };
