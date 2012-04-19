@@ -76,6 +76,8 @@ define([ 'use!underscore' ], function(_) {
 
         fn(iTake2Arguments, a, b);
         fn(iTake3Arguments, a, b, c);
+        expect(wasITake2ArgumentsCalled).to.be.ok();
+        expect(wasITake3ArgumentsCalled).to.be.ok();
       })();
     });
 
