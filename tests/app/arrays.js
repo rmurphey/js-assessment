@@ -36,13 +36,13 @@ define([ 'use!underscore' ], function(_) {
       expect(result[result.length - 1]).to.be(10);
     });
 
-    it("you should be able to create an array from two arrays", function() {
+    it("you should be able to join together two arrays", function() {
       // define a function for fn so that the following will pass
-      var c = [ 'a', 'b', 'c' ],
+      var c = [ 'a', 'b', 'c', 1 ],
           result = fn(a, c);
 
-      expect(result).to.have.length(7);
-      expect(result.join(' ')).to.be('1 2 3 4 a b c');
+      expect(result).to.have.length(8);
+      expect(result.join(' ')).to.be('1 2 3 4 a b c 1');
     });
 
     it("you should be able to add an item anywhere in an array", function() {
