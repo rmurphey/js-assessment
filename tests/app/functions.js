@@ -97,6 +97,7 @@ define([ 'use!underscore' ], function(_) {
       expect(fn(curryMe, a, b, c)()).to.be(curryMe(a, b, c));
       expect(fn(curryMe, a, b, c)()).to.be(curryMe(a, b, c));
       expect(fn(curryMe, b, a, c)()).to.be(curryMe(b, a, c));
+      expect(fn(curryMe)(b)(a)(c) ).to.be(curryMe(b, a, c));
     });
 
     it('you should be able to use closures', function () {
