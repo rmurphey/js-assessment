@@ -1,16 +1,44 @@
 define([ 'jquery', 'use!underscore' ], function($, _) {
   describe("async behavior", function() {
-    var promise, fn;
+
+    var promise, fn, Promise;
 
     beforeEach(function() {
-      fn = function() { };
+
+      fn = function() {
+
+      };
+
+      Promise = function () {
+        this.cb = null;
+      };
+
+      Promise.prototype.then = function (fn) {
+        this.cb = fn;
+      };
+
+      Promise.prototype.fulfill = function (result) {
+        if (this.cb) {
+          this.cb(result);
+        }
+      };
+
     });
 
     it("you should understand how to uses 'promises'", function(done) {
+
       var flag = false;
 
       fn = function() {
-        // write a function that makes the test pass
+
+        promise = new Promise();
+
+        // do something here.
+        setTimeout(function(){
+          promise.fulfill(true);
+        }, 20);
+
+        return promise;
       };
 
       fn().then(function(result) {
@@ -18,6 +46,7 @@ define([ 'jquery', 'use!underscore' ], function($, _) {
         expect(flag).to.be(true);
         done();
       });
+
     });
 
     it("you should be able to receive data from the server and manipulate it", function(done) {
@@ -30,11 +59,31 @@ define([ 'jquery', 'use!underscore' ], function($, _) {
             done();
           };
 
-      // replace the call to the tests function below with code that calls the
-      // tests function once the data has been a) retrieved from the server and
-      // b) manipulated so the tests will pass.
+        fn = function(url) {
 
-      tests();
+          promise = new Promise();
+
+          require(["text!" + url], function (json) {
+            var obj = JSON.parse(json),
+                people = [],
+                i,
+                l = obj.people.length;
+
+            for (i = 0; i < l; i ++) {
+              people[i] = obj.people[i].name;
+            }
+
+            people.sort();
+            promise.fulfill(people)
+          });
+
+          return promise;
+        };
+
+        fn(url).then(function(result) {
+          peopleArray = result;
+          tests();
+        });
     });
   });
 });

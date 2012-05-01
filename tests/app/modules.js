@@ -3,8 +3,20 @@ define([ 'use!underscore' ], function(_) {
     var fn = function() {};
 
     it("you should be able to create a function that returns a module", function() {
-      fn = function() {
-        // write a function that makes the tests pass
+
+      var Person = function (greeting, name) {
+        this.greeting = greeting;
+        this.name = name;
+      };
+
+      Person.prototype.greeting = "Hi";
+      Person.prototype.name = "Bob";
+      Person.prototype.sayIt = function () {
+        return this.greeting + ", " + this.name;
+      }
+
+      fn = function(greeting, name) {
+        return new Person(greeting, name);
       };
 
       var module = fn('hello', 'matt');
