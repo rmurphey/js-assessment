@@ -1,14 +1,9 @@
 define([ 'use!underscore' ], function(_) {
   describe("arrays", function() {
-    var a, b, fn;
+    var a, fn;
 
     beforeEach(function() {
       a = [ 1, 2, 3, 4 ];
-      b = {
-        foo : 'bar',
-        baz : 'bim'
-      };
-
       fn = function() { };
     });
 
