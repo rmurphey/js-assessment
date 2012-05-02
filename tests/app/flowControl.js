@@ -1,3 +1,6 @@
+if (typeof define !== 'function') { var define = require('amdefine')(module); }
+if (typeof expect !== 'function') { var expect = require('expect.js'); }
+
 define([ 'use!underscore' ], function(_) {
   describe("flow control", function() {
     var fn;
