@@ -1,5 +1,4 @@
 var requirejs = require('requirejs');
-var mocha = require('mocha');
 
 requirejs.config({
   baseUrl : __dirname + '/../',
@@ -26,10 +25,17 @@ var tests = [
   'tests/app/arrays',
   'tests/app/objects',
   'tests/app/functions',
-  // 'tests/app/async',
-  // 'tests/app/views'
+  'tests/app/modules',
+  'tests/app/flowControl'
 ];
 
+if (typeof window !== 'undefined') {
+  tests.push('tests/app/views');
+  tests.push('tests/app/async');
+}
+
 requirejs(tests, function() {
-  // mocha.run();
+  if (typeof mocha !== 'undefined') {
+    mocha.run();
+  }
 });
