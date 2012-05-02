@@ -63,7 +63,9 @@ this be more flexible than it currently is.
 
 # Todos
 
-- Command line runner
+There are a number of things that would make this project better; check out the
+[issues](https://github.com/rmurphey/js-assessment/issues) for details, pull
+requests welcome!
 
 # License
 

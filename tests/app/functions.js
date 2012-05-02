@@ -104,16 +104,18 @@ define([ 'use!underscore' ], function(_) {
       var doSomeStuff;
 
       fn = function (vals) {
-        // you can only edit function body here
+        // this function should return an array of functions,
+        // such that the tests below pass
       };
 
       doSomeStuff = function (x) { return x * x; };
 
       var funcs = fn(arr);
       expect(funcs).to.have.length(arr.length);
-      for (var i = funcs.length - 1; i >= 0; i--) {
+
+      _.each(funcs, function(func, i) {
         expect(funcs[i]()).to.be(doSomeStuff(arr[i]));
-      };
+      });
     });
   });
 });
