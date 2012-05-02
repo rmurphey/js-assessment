@@ -26,6 +26,13 @@ get the tests to pass. To do this, you'll need to edit the files in the
 the right direction; once you update a test, you can reload the test page in
 the browser to see whether it worked.
 
+You can also run (most of) the tests on the command line. To do this, run the
+following:
+
+    ./node_modules/mocha/bin/mocha -R spec tests/runner.js
+
+The command line runner is a work in progress; contributions welcome :)
+
 ## I want to contribute tests; what do I do?
 
 Submit a pull request! The tests are currently loosely organized by topic, so
