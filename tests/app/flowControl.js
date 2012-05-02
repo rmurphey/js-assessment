@@ -16,8 +16,11 @@ define([ 'use!underscore' ], function(_) {
         // otherwise the function should return the number
       };
 
-      // replace the following test with tests that prove your function works
-      expect(fn()).to.be.ok();
+      expect(fn()).not.to.be.ok();
+      expect(fn(2)).to.be(2);
+      expect(fn(3)).to.be('fizz');
+      expect(fn(5)).to.be('buzz');
+      expect(fn(15)).to.be('fizzbuzz');
     });
 
     it("you should be able to work with logical operators", function() {
