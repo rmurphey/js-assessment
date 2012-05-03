@@ -13,14 +13,17 @@
   },
   "dependencies": {
     "express" : "2.5.x",
-    "underscore" : "1.3.x"
+    "underscore" : "1.3.x",
+    "amdefine" : "0.0.2",
+    "expect.js" : "0.1.2"
   },
   "devDependencies": {
     "mocha" : "1.0.x",
     "requirejs" : "1.0.x"
   },
   "scripts": {
-    "start": "node bin/serve"
+    "start": "node bin/serve",
+    "test": "./node_modules/mocha/bin/mocha -R spec tests/runner.js"
   },
   "bin" : "bin/serve",
   "bugs" : {
