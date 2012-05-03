@@ -22,7 +22,8 @@
     "requirejs" : "1.0.x"
   },
   "scripts": {
-    "start": "node bin/serve"
+    "start": "node bin/serve",
+    "test": "./node_modules/mocha/bin/mocha -R spec tests/runner.js"
   },
   "bin" : "bin/serve",
   "bugs" : {
