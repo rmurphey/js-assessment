@@ -1,16 +1,13 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
 if (typeof expect !== 'function') { var expect = require('expect.js'); }
 
-define([ 'use!underscore' ], function(_) {
+define([
+  'app/modules'
+], function(answers) {
   describe("the module pattern", function() {
-    var fn = function() {};
-
     it("you should be able to create a function that returns a module", function() {
-      fn = function() {
-        // write a function that makes the tests pass
-      };
+      var module = answers.createModule('hello', 'matt');
 
-      var module = fn('hello', 'matt');
       expect(module.name).to.be.ok();
       expect(module.greeting).to.be.ok();
       expect(module.sayIt).to.be.a('function');

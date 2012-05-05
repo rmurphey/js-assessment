@@ -1,24 +1,8 @@
-To work on the tests, open a browser and visit http://localhost:{{port}}. Then,
-edit the tests in the files in the tests/app directory, reloading your browser
-to see whether the tests are passing.
+To work on the tests, open a browser and visit http://localhost:{{port}}.
 
-Each test will look something like this:
-
-    it("you should be able to return a truthy value", function() {
-      // define a function for fn so that the following will pass
-      expect(fn()).to.be.ok();
-    });
-
-In the case of the above test, you'd need to define a value for fn (by default,
-fn is a function that does nothing):
-
-    it("you should be able to return a truthy value", function() {
-      // define a function for fn so that the following will pass
-      fn = function() {
-        return true;
-      };
-      expect(fn()).to.be.ok();
-    });
+The tests are in files in the tests/app directory; you will need to fill out
+the answers in the corresponding files in the app directory, reloading your
+browser to see whether the tests are passing.
 
 For some tests, the instructions will be more involved; in those cases, the
 inline comments should give you the details you need.
