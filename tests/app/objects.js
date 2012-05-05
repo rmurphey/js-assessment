@@ -1,13 +1,11 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
 if (typeof expect !== 'function') { var expect = require('expect.js'); }
 
-define([ 'use!underscore' ], function(_) {
+define([ 'app/objects' ], function(answers) {
   describe("objects and context", function() {
-    var a, b, C, fn;
+    var a, b, C;
 
     beforeEach(function() {
-      fn = function() {};
-
       a = {
         name : 'Matt',
         greeting : 'Hello',
@@ -30,7 +28,7 @@ define([ 'use!underscore' ], function(_) {
 
     it("you should be able to alter the context in which a method runs", function() {
       // define a function for fn so that the following will pass
-      expect(fn()).to.be('Yo, Rebecca!');
+      expect(answers.alterContext(a.sayIt, b)).to.be('Yo, Rebecca!');
     });
 
     it("you should be able to alter multiple objects at once", function() {
@@ -39,7 +37,7 @@ define([ 'use!underscore' ], function(_) {
           obj2 = new C('Melissa'),
           greeting = "What's up";
 
-      fn(greeting);
+      answers.alterObjects(C, greeting);
 
       expect(obj1.greeting).to.be(greeting);
       expect(obj2.greeting).to.be(greeting);
@@ -57,7 +55,7 @@ define([ 'use!underscore' ], function(_) {
 
       var obj = new C();
 
-      expect(fn(obj)).to.eql([ 'foo: bar', 'baz: bim' ]);
+      expect(answers.iterate(obj)).to.eql([ 'foo: bar', 'baz: bim' ]);
     });
   });
 });

@@ -1,47 +1,28 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
 if (typeof expect !== 'function') { var expect = require('expect.js'); }
 
-define([ 'use!underscore' ], function(_) {
+define([
+  'app/flowControl'
+], function(answers) {
   describe("flow control", function() {
-    var fn;
-
-    beforeEach(function() {
-      fn = function() { };
-    });
-
     it("you should be able to conditionally branch your code", function() {
-      fn = function() {
-        // write a function that receives a number as its argument;
-        // if the number is divisible by 3, the function should return 'fizz';
-        // if the number is divisible by 5, the function should return 'buzz';
-        // if the number is divisible the 3 and 5, the function should return
-        // 'fizzbuzz';
-        // otherwise the function should return the number
-      };
+      var num = Math.floor(Math.random() * 10) + 1;
 
-      expect(fn()).not.to.be.ok();
-      expect(fn(2)).to.be(2);
-      expect(fn(3)).to.be('fizz');
-      expect(fn(5)).to.be('buzz');
-      expect(fn(15)).to.be('fizzbuzz');
+      expect(answers.fizzBuzz()).not.to.be.ok();
+      expect(answers.fizzBuzz(2)).to.be(2);
+      expect(answers.fizzBuzz(3)).to.be('fizz');
+      expect(answers.fizzBuzz(5)).to.be('buzz');
+      expect(num * 3 * 5).to.be('fizzbuzz');
     });
 
     it("you should be able to work with logical operators", function() {
-      var and = function(val1, val2) {
-            // write a function that makes the tests below pass
-          },
+      expect(answers.and(false, false)).not.to.be.ok();
+      expect(answers.and(true, false)).not.to.be.ok();
+      expect(answers.and(true, true)).to.be.ok();
 
-          or = function(val1, val2) {
-            // write a function that makes the tests below pass
-          };
-
-      expect(and(false, false)).not.to.be.ok();
-      expect(and(true, false)).not.to.be.ok();
-      expect(and(true, true)).to.be.ok();
-
-      expect(or(true, false)).to.be.ok();
-      expect(or(true, true)).to.be.ok();
-      expect(or(false, false)).not.to.be.ok();
+      expect(answers.or(true, false)).to.be.ok();
+      expect(answers.or(true, true)).to.be.ok();
+      expect(answers.or(false, false)).not.to.be.ok();
     });
   });
 

@@ -8,7 +8,6 @@ var tests = [
 ];
 
 if (typeof window !== 'undefined') {
-  tests.push('tests/app/views');
   tests.push('tests/app/async');
 } else {
   var requirejs = require('requirejs');
