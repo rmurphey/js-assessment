@@ -40,6 +40,10 @@ define(function() {
 
     square : function(arr) {
 
+    },
+
+    findAllOccurrences : function(arr, target) {
+
     }
   };
 });

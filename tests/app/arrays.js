@@ -62,7 +62,6 @@ define([
     });
 
     it("you should be able to find duplicates in an array", function() {
-      // define a function for fn so that the following will pass
       var result = answers.duplicates([ 1, 2, 4, 4, 3, 3, 1, 5 ]);
 
       expect(result).to.have.length(3);
@@ -70,11 +69,17 @@ define([
     });
 
     it("you should be able to square each number in an array", function() {
-      // define a function for fn so that the following will pass
       var result = answers.square(a);
 
       expect(result).to.have.length(4);
       expect(result.join(' ')).to.be('1 4 9 16');
     });
+
+    it("you should be able to find all occurrences of an item in an array", function() {
+      var result = answers.findAllOccurrences('abcdefabc'.split(''), 'a');
+
+      expect(result.join(' ')).to.be('0 6');
+    });
+
   });
 });
