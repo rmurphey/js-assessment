@@ -21,10 +21,10 @@ You can then view the tests in your browser at
 [http://localhost:4444](http://localhost:4444).
 
 When you visit that page, all of the tests should be failing; your job is to
-get the tests to pass. To do this, you'll need to edit the files in the
-`tests/app` directory. The tests have inline comments that should point you in
-the right direction; once you update a test, you can reload the test page in
-the browser to see whether it worked.
+get the tests to pass. To do this, you'll need to refer to the tests in the
+files in the `tests/app` directory, and edit the files in the `app/` directory.
+Once you update a test, you can reload the test page in the browser to see
+whether it worked.
 
 You can also run (most of) the tests on the command line:
 
@@ -37,7 +37,8 @@ The command line runner is a work in progress; contributions welcome :)
 Submit a pull request! The tests are currently loosely organized by topic, so
 you should do your best to add tests to the appropriate file in `tests/app`, or
 create a new file there if you don't see an appropriate one. If you do create
-a new file, make sure to add it to `tests/runner.js`.
+a new file, make sure to add it to `tests/runner.js`, and to add a stub for the
+solution to the corresponding file in `app/`.
 
 Any substantial contributions will be duly credited in the readme, as well as
 of course in the git commit log.
