@@ -104,7 +104,7 @@ define([
 
       doSomeStuff = function (x) { return x * x; };
 
-      var funcs = answers.makeClosures(arr);
+      var funcs = answers.makeClosures(arr, doSomeStuff);
       expect(funcs).to.have.length(arr.length);
 
       _.each(funcs, function(func, i) {
