@@ -6,7 +6,7 @@ define(function() {
 
     },
 
-    alterObjects : function(constructor) {
+    alterObjects : function(constructor, greeting) {
 
     },
 
