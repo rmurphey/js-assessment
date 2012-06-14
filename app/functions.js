@@ -2,7 +2,7 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
 
 define(function() {
   return {
-    argsAsArray : function(arr) {
+    argsAsArray : function(fn, arr) {
 
     },
 

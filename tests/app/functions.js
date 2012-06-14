@@ -11,7 +11,7 @@ define([
         };
 
     it("you should be able to use an array as arguments when calling a function", function() {
-      var result = answers.argsAsArray([ 'Hello', 'Ellie', '!' ]);
+      var result = answers.argsAsArray(sayIt, [ 'Hello', 'Ellie', '!' ]);
       expect(result).to.be('Hello, Ellie!');
     });
 
