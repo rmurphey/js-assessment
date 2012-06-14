@@ -33,6 +33,7 @@ define([
     it("you should be able to return a function from a function", function() {
       // define a function for fn so that the following will pass
       expect(answers.functionFunction('Hello')('world')).to.be('Hello, world');
+      expect(answers.functionFunction('Hai')('can i haz funxtion?')).to.be('Hai, can i haz funxtion?');
     });
 
     it("you should be able to create a 'partial' function", function() {
