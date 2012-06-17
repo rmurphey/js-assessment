@@ -10,11 +10,11 @@ define(function() {
 
     },
 
-    functionFunction : function() {
+    functionFunction : function(str) {
 
     },
 
-    partial : function() {
+    partial : function(fn, str1, str2) {
 
     },
 
@@ -22,15 +22,15 @@ define(function() {
 
     },
 
-    callIt : function() {
+    callIt : function(fn) {
 
     },
 
-    curryIt : function() {
+    curryIt : function(fn) {
 
     },
 
-    makeClosures : function() {
+    makeClosures : function(arr, fn) {
 
     }
   };
