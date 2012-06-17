@@ -4,7 +4,7 @@ define(function() {
 
     },
 
-    manipulateRemoteData : function() {
+    manipulateRemoteData : function(url) {
 
     }
   };
