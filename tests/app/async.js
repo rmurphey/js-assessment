@@ -2,7 +2,7 @@ define([
   'app/async'
 ], function(answers) {
   describe("async behavior", function() {
-    it("you should understand how to uses 'promises'", function(done) {
+    it("you should understand how to use 'promises'", function(done) {
       var flag = false;
 
       answers.async().then(function(result) {
