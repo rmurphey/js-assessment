@@ -4,7 +4,8 @@ var tests = [
   'tests/app/objects',
   'tests/app/functions',
   'tests/app/modules',
-  'tests/app/flowControl'
+  'tests/app/flowControl',
+  'tests/app/logicalOperators'
 ];
 
 if (typeof window !== 'undefined') {
