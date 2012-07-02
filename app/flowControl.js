@@ -10,13 +10,5 @@ define([ 'use!underscore' ], function(_) {
       // 'fizzbuzz';
       // otherwise the function should return the number
     },
-
-    or : function(a, b) {
-
-    },
-
-    and : function(a, b) {
-
-    }
   };
 });
