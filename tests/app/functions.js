@@ -95,7 +95,6 @@ define([
       expect(answers.curryIt(curryMe, a)(b, c)).to.be(curryMe(a, b, c));
       expect(answers.curryIt(curryMe, a, b)(c)).to.be(curryMe(a, b, c));
       expect(answers.curryIt(curryMe, a, b, c)()).to.be(curryMe(a, b, c));
-      expect(answers.curryIt(curryMe, a, b, c)()).to.be(curryMe(a, b, c));
       expect(answers.curryIt(curryMe, b, a, c)()).to.be(curryMe(b, a, c));
     });
 
