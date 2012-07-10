@@ -1,6 +1,6 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
 
-define([ 'use!underscore' ], function(_) {
+define(function() {
   return {
     fizzBuzz : function(num) {
       // write a function that receives a number as its argument;
