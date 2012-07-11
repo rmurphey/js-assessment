@@ -5,6 +5,7 @@ define([
   'use!underscore',
   'app/functions'
 ], function(_, answers) {
+
   describe("functions", function() {
     var sayItCalled = false;
     var sayIt = function(greeting, name, punctuation) {
@@ -12,15 +13,17 @@ define([
           return greeting + ', ' + name + (punctuation || '!');
         };
 
-    it("you should be able to use an array as arguments when calling a function", function() {
+    beforeEach(function () {
       sayItCalled = false;
+    });
+
+    it("you should be able to use an array as arguments when calling a function", function() {
       var result = answers.argsAsArray(sayIt, [ 'Hello', 'Ellie', '!' ]);
       expect(result).to.be('Hello, Ellie!');
       expect(sayItCalled).to.be.ok();
     });
 
     it("you should be able to change the context in which a function is called", function() {
-      sayItCalled = false;
       var speak = function() {
             return sayIt(this.greeting, this.name, '!!!');
           },
@@ -44,7 +47,6 @@ define([
 
     it("you should be able to create a 'partial' function", function() {
       // define a function for fn so that the following will pass
-      sayItCalled = false;
       var partial = answers.partial(sayIt, 'Hello', 'Ellie');
       expect(partial('!!!')).to.be('Hello, Ellie!!!');
       expect(sayItCalled).to.be.ok();
