@@ -1,9 +1,19 @@
+
 body {
   font: 20px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 60px 50px;
 }
 
-#mocha h1, h2 {
+#mocha ul, #mocha li {
+  margin: 0;
+  padding: 0;
+}
+
+#mocha ul {
+  list-style: none;
+}
+
+#mocha h1, #mocha h2 {
   margin: 0;
 }
 
@@ -11,6 +21,15 @@ body {
   margin-top: 15px;
   font-size: 1em;
   font-weight: 200;
+}
+
+#mocha h1 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#mocha h1 a:hover {
+  text-decoration: underline;
 }
 
 #mocha .suite .suite h1 {
@@ -47,13 +66,40 @@ body {
   font-family: arial;
 }
 
+#mocha .test.pass.medium .duration {
+  background: #C09853;
+}
+
+#mocha .test.pass.slow .duration {
+  background: #B94A48;
+}
+
 #mocha .test.pass::before {
   content: '✓';
   font-size: 12px;
   display: block;
   float: left;
   margin-right: 5px;
-  color: #00c41c;
+  color: #00d6b2;
+}
+
+#mocha .test.pass .duration {
+  font-size: 9px;
+  margin-left: 5px;
+  padding: 2px 5px;
+  color: white;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.2);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.2);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.2);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#mocha .test.pass.fast .duration {
+  display: none;
 }
 
 #mocha .test.pending {
