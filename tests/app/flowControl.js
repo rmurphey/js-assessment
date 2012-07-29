@@ -6,7 +6,11 @@ define([
 ], function(answers) {
   describe("flow control", function() {
     it("you should be able to conditionally branch your code", function() {
-      var num = Math.floor(Math.random() * 10) + 1;
+      var num = 0;
+
+      while (num % 3 === 0 || num % 5 === 0) {
+          num = Math.floor(Math.random() * 10) + 1;
+      }
 
       expect(answers.fizzBuzz()).not.to.be.ok();
       expect(answers.fizzBuzz(2)).to.be(2);
