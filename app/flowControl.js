@@ -8,7 +8,9 @@ define(function() {
       // if the number is divisible by 5, the function should return 'buzz';
       // if the number is divisible the 3 and 5, the function should return
       // 'fizzbuzz';
-      // otherwise the function should return the number
-    },
+      //
+      // otherwise the function should return the number, or false if no number
+      // was provided
+    }
   };
 });
