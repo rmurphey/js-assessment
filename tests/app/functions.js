@@ -42,6 +42,20 @@ define([
       expect(answers.functionFunction('Hai')('can i haz funxtion?')).to.be('Hai, can i haz funxtion?');
     });
 
+    it('you should be able to use closures', function () {
+      var arr = [ Math.random(), Math.random(), Math.random(), Math.random() ];
+      var doSomeStuff;
+
+      doSomeStuff = function (x) { return x * x; };
+
+      var funcs = answers.makeClosures(arr, doSomeStuff);
+      expect(funcs).to.have.length(arr.length);
+
+      for (var i = 0; i < arr.length; i++) {
+        expect(funcs[i]()).to.be(doSomeStuff(arr[i]));
+      }
+    });
+
     it("you should be able to create a 'partial' function", function() {
       var partial = answers.partial(sayIt, 'Hello', 'Ellie');
       expect(partial('!!!')).to.be('Hello, Ellie!!!');
@@ -60,7 +74,7 @@ define([
       expect(answers.useArguments(a, b, c, d)).to.be(a + b + c + d);
     });
 
-    it("you should be able to apply functions", function () {
+    it("you should be able to apply functions with arbitrary numbers of arguments", function () {
       (function () {
         var a = Math.random(), b = Math.random(), c = Math.random();
 
@@ -102,20 +116,6 @@ define([
       expect(answers.curryIt(curryMe, a, b)(c)).to.be(curryMe(a, b, c));
       expect(answers.curryIt(curryMe, a, b, c)()).to.be(curryMe(a, b, c));
       expect(answers.curryIt(curryMe, b, a, c)()).to.be(curryMe(b, a, c));
-    });
-
-    it('you should be able to use closures', function () {
-      var arr = [ Math.random(), Math.random(), Math.random(), Math.random() ];
-      var doSomeStuff;
-
-      doSomeStuff = function (x) { return x * x; };
-
-      var funcs = answers.makeClosures(arr, doSomeStuff);
-      expect(funcs).to.have.length(arr.length);
-
-      for (var i = 0; i < arr.length; i++) {
-        expect(funcs[i]()).to.be(doSomeStuff(arr[i]));
-      }
     });
   });
 });
