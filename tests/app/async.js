@@ -4,17 +4,23 @@ define([
   describe("async behavior", function() {
     it("you should understand how to use 'promises' to handle asynchronicity", function(done) {
       var flag = false;
+      var finished = 0;
+      var total = 2;
+
+      function finish(done) {
+        if (++finished == total) { done(); }
+      }
 
       answers.async(true).then(function(result) {
         flag = result;
         expect(flag).to.be(true);
-        done();
+        finish(done);
       });
 
       answers.async('success').then(function(result) {
         flag = result;
         expect(flag).to.be('success');
-        done();
+        finish(done);
       });
 
       expect(flag).to.be(false);
