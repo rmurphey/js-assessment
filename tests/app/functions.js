@@ -32,21 +32,17 @@ define([
             name : 'Rebecca'
           };
 
-      // define a function for fn that calls the speak function such that the
-      // following test will pass
       var result = answers.speak(speak, obj);
       expect(result).to.be('Hello, Rebecca!!!');
       expect(sayItCalled).to.be.ok();
     });
 
     it("you should be able to return a function from a function", function() {
-      // define a function for fn so that the following will pass
       expect(answers.functionFunction('Hello')('world')).to.be('Hello, world');
       expect(answers.functionFunction('Hai')('can i haz funxtion?')).to.be('Hai, can i haz funxtion?');
     });
 
     it("you should be able to create a 'partial' function", function() {
-      // define a function for fn so that the following will pass
       var partial = answers.partial(sayIt, 'Hello', 'Ellie');
       expect(partial('!!!')).to.be('Hello, Ellie!!!');
       expect(sayItCalled).to.be.ok();
@@ -117,9 +113,9 @@ define([
       var funcs = answers.makeClosures(arr, doSomeStuff);
       expect(funcs).to.have.length(arr.length);
 
-      for(var i = 0; i< arr.length; i++) {
+      for (var i = 0; i < arr.length; i++) {
         expect(funcs[i]()).to.be(doSomeStuff(arr[i]));
-      };
+      }
     });
   });
 });
