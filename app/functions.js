@@ -14,6 +14,10 @@ define(function() {
 
     },
 
+    makeClosures : function(arr, fn) {
+
+    },
+
     partial : function(fn, str1, str2) {
 
     },
@@ -27,10 +31,6 @@ define(function() {
     },
 
     curryIt : function(fn) {
-
-    },
-
-    makeClosures : function(arr, fn) {
 
     }
   };
