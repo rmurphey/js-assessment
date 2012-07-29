@@ -1,8 +1,8 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
 
-define(function() {
+define([ 'jquery' ], function($) {
   return {
-    async : function() {
+    async : function(value) {
 
     },
 

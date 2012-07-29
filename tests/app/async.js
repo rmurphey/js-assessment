@@ -5,7 +5,7 @@ define([
     it("you should understand how to use 'promises'", function(done) {
       var flag = false;
 
-      answers.async().then(function(result) {
+      answers.async(true).then(function(result) {
         flag = result;
         expect(flag).to.be(true);
         done();
