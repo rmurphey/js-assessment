@@ -1,5 +1,6 @@
 var tests = [
   // link to test files here
+  'tests/app/bestPractices',
   'tests/app/arrays',
   'tests/app/objects',
   'tests/app/functions',
