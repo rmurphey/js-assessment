@@ -1,7 +1,23 @@
-# A test-driven JS assessment
+# PROS UI Software Engineer Pre-Interview Questions
 
-This repo includes a set of tests that can be used to assess the skills of
-a candidate for a JavaScript position, or to improve one's own skills.
+The repo includes a set of tests that assess your JavaScript skills, based
+on Rebecca Murphey's js-assessment framework.
+
+# For Interviewees
+
+## How do I begin?
+
+1. If you don't have a github account, [sign up](https://github.com/signup/free)!
+2. Fork this repo to your own github repo
+3. Clone the repo locally on your own computer
+4. Implement the functions in each of the scriptes located in app/
+5. Test your results as described below
+6. Commit your changes to your personal github repo (There is no need to submit a pull request)
+7. Email us the link to your repo so that we can review your results
+
+Note: You may receive notifications that your repo has been followed or forked by a PROS employee.
+These actions are simply part of the review process.
+
 
 ## I want to work on the tests; what do I do?
 To use the tests, you will need to install Node -- you can do this via the
@@ -31,6 +47,10 @@ You can also run (most of) the tests on the command line:
     npm test
 
 The command line runner is a work in progress; contributions welcome :)
+
+
+
+# For PROS Employees
 
 ## I want to contribute tests; what do I do?
 
@@ -81,7 +101,8 @@ requests welcome!
 
 # License
 
-Copyright &copy; 2012 Rebecca Murphey.
+Portions Copyright &copy; 2012 PROS, Inc.
+Core Framework Copyright &copy; 2012 Rebecca Murphey. [Core Repo](https://github.com/rmurphey/js-assessment)
 
 This work is licensed under the [Creative Commons Attribution-Share Alike 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
 license. You are free to share and remix the work, and to use it for commercial
