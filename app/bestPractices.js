@@ -1,5 +1,4 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
-if (typeof window !== 'object') { var window = {};}
 
 /**
  * This file defines an object with some methods. Some of these methods are
