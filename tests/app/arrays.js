@@ -13,6 +13,7 @@ define([
 
     it("you should be able to determine the location of an item in an array", function() {
       expect(answers.indexOf(a, 3)).to.be(2);
+      expect(answers.indexOf(a, 5)).to.be(-1);
     });
 
     it("you should be able to add the values of an array", function() {
