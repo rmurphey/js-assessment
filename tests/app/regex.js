@@ -13,12 +13,15 @@ define([
     it("you should be able to detect a repeating letter in a string", function() {
       expect(answers.containsRepeatingLetter('bookkeeping')).to.be(true);
       expect(answers.containsRepeatingLetter('rattler')).to.be(true);
+      expect(answers.containsRepeatingLetter('ZEPPELIN')).to.be(true);
       expect(answers.containsRepeatingLetter('cats')).to.be(false);
+      expect(answers.containsRepeatingLetter('l33t')).to.be(false);
     });
 
     it("you should be able to determine whether a string ends with a vowel (aeiou)", function() {
       expect(answers.endsWithVowel('cats')).to.be(false);
       expect(answers.endsWithVowel('gorilla')).to.be(true);
+      expect(answers.endsWithVowel('I KNOW KUNG FU')).to.be(true);
     });
 
     it("you should be able to capture the first series of three numbers", function() {
@@ -36,6 +39,8 @@ define([
       expect(answers.matchesPattern('abc-def-hijk')).to.be(false);
       expect(answers.matchesPattern('1800-555-1212')).to.be(false);
       expect(answers.matchesPattern('800-555-12121')).to.be(false);
+      expect(answers.matchesPattern('800-5555-1212')).to.be(false);
+      expect(answers.matchesPattern('800-55-1212')).to.be(false);
     });
 
   });
