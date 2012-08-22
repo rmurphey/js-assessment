@@ -38,5 +38,23 @@ define([
       expect(answers.matchesPattern('800-555-12121')).to.be(false);
     });
 
+    it("you should be able to detect correctly-formatted monetary amounts in USD", function() {
+      expect(answers.isUSD('$132.03')).to.be(true);
+      expect(answers.isUSD('$32.03')).to.be(true);
+      expect(answers.isUSD('$2.03')).to.be(true);
+      expect(answers.isUSD('$1,023,032.03')).to.be(true);
+      expect(answers.isUSD('$20,933,209.93')).to.be(true);
+      expect(answers.isUSD('$20,933,209')).to.be(true);
+      expect(answers.isUSD('$459,049,393.21')).to.be(true);
+      expect(answers.isUSD('34,344.34')).to.be(false);
+      expect(answers.isUSD('$,344.34')).to.be(false);
+      expect(answers.isUSD('$34,344.3')).to.be(false);
+      expect(answers.isUSD('$34,344.344')).to.be(false);
+      expect(answers.isUSD('$34,344_34')).to.be(false);
+      expect(answers.isUSD('$3,432,12.12')).to.be(false);
+      expect(answers.isUSD('$3,432,1,034.12')).to.be(false);
+      expect(answers.isUSD('4$3,432,034.12')).to.be(false);
+    });
+
   });
 });
