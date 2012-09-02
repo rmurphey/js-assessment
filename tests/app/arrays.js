@@ -27,6 +27,15 @@ define([
       expect(result).to.have.length(3);
       expect(result.join(' ')).to.be('1 3 4');
     });
+    
+    it("you should be able to remove a value from an array (without making copy of original array)", function() {
+      a.push(2); // Make sure the value appears more than one time
+      var result = answers.removeWithoutCopy(a, 2);
+
+      expect(result).to.have.length(3);
+      expect(result.join(' ')).to.be('1 3 4');
+      expect(result).equal(a); //make sure that you return the same instance of array
+    });
 
     it("you should be able to add an item to the end of an array", function() {
       var result = answers.append(a, 10);
