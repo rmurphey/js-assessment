@@ -13,6 +13,10 @@ define(function() {
     remove : function(arr, item) {
 
     },
+    
+    removeWithoutCopy : function(arr, item) {
+
+    },
 
     append : function(arr, item) {
 
