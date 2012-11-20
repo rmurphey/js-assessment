@@ -16,17 +16,17 @@ define([
 
       answers.async(true).then(function(result) {
         flag = result;
-        expect(flag).to.be(true);
+        expect(flag).to.eql(true);
         finish(done);
       });
 
       answers.async('success').then(function(result) {
         flag = result;
-        expect(flag).to.be('success');
+        expect(flag).to.eql('success');
         finish(done);
       });
 
-      expect(flag).to.be(false);
+      expect(flag).to.eql(false);
     });
 
     it("you should be able to receive data from the server and manipulate it", function(done) {
@@ -34,7 +34,7 @@ define([
 
       answers.manipulateRemoteData(url).then(function(result) {
         expect(result).to.have.length(5);
-        expect(result.join(' ')).to.be('Adam Alex Matt Paul Rebecca');
+        expect(result.join(' ')).to.eql('Adam Alex Matt Paul Rebecca');
         done();
       });
     });

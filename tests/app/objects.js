@@ -28,7 +28,7 @@ define([ 'app/objects' ], function(answers) {
 
     it("you should be able to alter the context in which a method runs", function() {
       // define a function for fn so that the following will pass
-      expect(answers.alterContext(a.sayIt, b)).to.be('Yo, Rebecca!');
+      expect(answers.alterContext(a.sayIt, b)).to.eql('Yo, Rebecca!');
     });
 
     it("you should be able to alter multiple objects at once", function() {
@@ -39,9 +39,9 @@ define([ 'app/objects' ], function(answers) {
 
       answers.alterObjects(C, greeting);
 
-      expect(obj1.greeting).to.be(greeting);
-      expect(obj2.greeting).to.be(greeting);
-      expect(new C('Ellie').greeting).to.be(greeting);
+      expect(obj1.greeting).to.eql(greeting);
+      expect(obj2.greeting).to.eql(greeting);
+      expect(new C('Ellie').greeting).to.eql(greeting);
     });
 
     it("you should be able to iterate over an object's 'own' properties", function() {

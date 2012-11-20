@@ -9,15 +9,15 @@ define([
       var module = answers.createModule('hello', 'matt');
 
       expect(module.sayIt).to.be.a('function');
-      expect(module.name).to.be.ok('matt');
-      expect(module.greeting).to.be.ok('hello');
-      expect(module.sayIt()).to.be('hello, matt');
+      expect(module.name).to.eql('matt');
+      expect(module.greeting).to.eql('hello');
+      expect(module.sayIt()).to.eql('hello, matt');
 
       module.name = 'katniss';
       module.greeting = 'hi';
-      expect(module.name).to.be.ok('katniss');
-      expect(module.greeting).to.be.ok('hi');
-      expect(module.sayIt()).to.be('hi, katniss');
+      expect(module.name).to.eql('katniss');
+      expect(module.greeting).to.eql('hi');
+      expect(module.sayIt()).to.eql('hi, katniss');
     });
   });
 });

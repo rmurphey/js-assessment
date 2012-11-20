@@ -12,7 +12,7 @@ module.exports = function(opts) {
   }, opts || {});
 
   site.configure(function() {
-    [ 'app', 'lib', 'tests', 'data' ].forEach(function(dir) {
+    [ 'app', 'lib', 'tests', 'data', 'answers' ].forEach(function(dir) {
       site.use('/' + dir, staticDir(opts.baseDir + dir));
     });
     site.use(express.bodyParser());

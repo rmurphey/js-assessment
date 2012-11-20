@@ -12,20 +12,20 @@ define([
           num = Math.floor(Math.random() * 10) + 1;
       }
 
-      expect(answers.fizzBuzz()).not.to.be.ok();
-      expect(answers.fizzBuzz(2)).to.be(2);
-      expect(answers.fizzBuzz(101)).to.be(101);
+      expect(answers.fizzBuzz()).not.to.be.ok;
+      expect(answers.fizzBuzz(2)).to.eql(2);
+      expect(answers.fizzBuzz(101)).to.eql(101);
 
-      expect(answers.fizzBuzz(3)).to.be('fizz');
-      expect(answers.fizzBuzz(6)).to.be('fizz');
-      expect(answers.fizzBuzz(num * 3)).to.be('fizz');
+      expect(answers.fizzBuzz(3)).to.eql('fizz');
+      expect(answers.fizzBuzz(6)).to.eql('fizz');
+      expect(answers.fizzBuzz(num * 3)).to.eql('fizz');
 
-      expect(answers.fizzBuzz(5)).to.be('buzz');
-      expect(answers.fizzBuzz(10)).to.be('buzz');
-      expect(answers.fizzBuzz(num * 5)).to.be('buzz');
+      expect(answers.fizzBuzz(5)).to.eql('buzz');
+      expect(answers.fizzBuzz(10)).to.eql('buzz');
+      expect(answers.fizzBuzz(num * 5)).to.eql('buzz');
 
-      expect(answers.fizzBuzz(15)).to.be('fizzbuzz');
-      expect(answers.fizzBuzz(num * 3 * 5)).to.be('fizzbuzz');
+      expect(answers.fizzBuzz(15)).to.eql('fizzbuzz');
+      expect(answers.fizzBuzz(num * 3 * 5)).to.eql('fizzbuzz');
     });
   });
 });
