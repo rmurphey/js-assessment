@@ -13,6 +13,7 @@ define([
       }
 
       expect(answers.fizzBuzz()).not.to.be.ok;
+      expect(answers.fizzBuzz('foo')).not.to.be.ok;
       expect(answers.fizzBuzz(2)).to.eql(2);
       expect(answers.fizzBuzz(101)).to.eql(101);
 
