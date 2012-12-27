@@ -1,7 +1,9 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
 if (typeof expect !== 'function') { var expect = require('expect.js'); }
 
-define([ 'app/objects' ], function(answers) {
+define([
+  'app/objects'
+], function(answers) {
   describe("objects and context", function() {
     var a, b, C;
 

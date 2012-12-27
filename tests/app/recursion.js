@@ -3,7 +3,7 @@ if (typeof expect !== 'function') { var expect = require('expect.js'); }
 
 define([
   'app/recursion',
-  'use!underscore'
+  'underscore'
 ], function(answers, _) {
   describe("recursion", function() {
     var fileData = {
