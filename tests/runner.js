@@ -7,7 +7,8 @@ var tests = [
   'tests/app/modules',
   'tests/app/flowControl',
   'tests/app/logicalOperators',
-  'tests/app/regex'
+  'tests/app/regex',
+  'tests/app/recursion'
 ];
 
 if (typeof window !== 'undefined') {
