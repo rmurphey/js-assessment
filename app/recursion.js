@@ -4,6 +4,10 @@ define(function() {
   return {
     listFiles: function(data, dirName) {
 
+    },
+
+    permute: function(arr) {
+
     }
   };
 });
