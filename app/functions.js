@@ -30,6 +30,10 @@ define(function() {
 
     },
 
+    partialUsingArguments : function(fn) {
+
+    },
+
     curryIt : function(fn) {
 
     }
