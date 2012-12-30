@@ -105,17 +105,41 @@ define([
       })();
     });
 
+
+    it("you should be able to create a 'partial' function for variable number of applied arguments", function () {
+      var partialMe = function (x, y, z) {
+        return x / y * z;
+      };
+
+      var a = Math.random(), b = Math.random(), c = Math.random();
+      expect(answers.partialUsingArguments(partialMe)(a, b, c)).to.eql(partialMe(a, b, c));
+      expect(answers.partialUsingArguments(partialMe, a)(b, c)).to.eql(partialMe(a, b, c));
+      expect(answers.partialUsingArguments(partialMe, a, b)(c)).to.eql(partialMe(a, b, c));
+      expect(answers.partialUsingArguments(partialMe, a, b, c)()).to.eql(partialMe(a, b, c));
+    });
+
     it("you should be able to curry existing functions", function () {
       var curryMe = function (x, y, z) {
         return x / y * z;
       };
 
-      var a = Math.random(), b = Math.random(), c = Math.random();
-      expect(answers.curryIt(curryMe)(a, b, c)).to.eql(curryMe(a, b, c));
-      expect(answers.curryIt(curryMe, a)(b, c)).to.eql(curryMe(a, b, c));
-      expect(answers.curryIt(curryMe, a, b)(c)).to.eql(curryMe(a, b, c));
-      expect(answers.curryIt(curryMe, a, b, c)()).to.eql(curryMe(a, b, c));
-      expect(answers.curryIt(curryMe, b, a, c)()).to.eql(curryMe(b, a, c));
+      var a = Math.random(), b = Math.random(), c = Math.random(), result;
+
+      result = answers.curryIt(curryMe);
+      expect(typeof result).to.eql('function');
+      expect(result.length).to.eql(1);
+
+      result = answers.curryIt(curryMe)(a);
+      expect(typeof result).to.eql('function');
+      expect(result.length).to.eql(1);
+
+      result = answers.curryIt(curryMe)(a)(b);
+      expect(typeof result).to.eql('function');
+      expect(result.length).to.eql(1);
+
+      result = answers.curryIt(curryMe)(a)(b)(c);
+      expect(typeof result).to.eql('number');
+      expect(result).to.eql(curryMe(a, b, c));
     });
   });
 });
