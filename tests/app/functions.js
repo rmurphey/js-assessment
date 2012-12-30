@@ -123,12 +123,23 @@ define([
         return x / y * z;
       };
 
-      var a = Math.random(), b = Math.random(), c = Math.random();
-      expect(answers.curryIt(curryMe)(a, b, c)).to.eql(curryMe(a, b, c));
-      expect(answers.curryIt(curryMe, a)(b, c)).to.eql(curryMe(a, b, c));
-      expect(answers.curryIt(curryMe, a, b)(c)).to.eql(curryMe(a, b, c));
-      expect(answers.curryIt(curryMe, a, b, c)()).to.eql(curryMe(a, b, c));
-      expect(answers.curryIt(curryMe, b, a, c)()).to.eql(curryMe(b, a, c));
+      var a = Math.random(), b = Math.random(), c = Math.random(), result;
+
+      result = answers.curryIt(curryMe);
+      expect(typeof result).to.eql('function');
+      expect(result.length).to.eql(1);
+
+      result = answers.curryIt(curryMe)(a);
+      expect(typeof result).to.eql('function');
+      expect(result.length).to.eql(1);
+
+      result = answers.curryIt(curryMe)(a)(b);
+      expect(typeof result).to.eql('function');
+      expect(result.length).to.eql(1);
+
+      result = answers.curryIt(curryMe)(a)(b)(c);
+      expect(typeof result).to.eql('number');
+      expect(result).to.eql(curryMe(a, b, c));
     });
   });
 });
