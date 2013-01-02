@@ -1,3 +1,4 @@
+/*globals describe:true, it:true, expect:true, beforeEach:true */
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
 if (typeof expect !== 'function') { var expect = require('expect.js'); }
 
@@ -11,7 +12,7 @@ define([
       var total = 2;
 
       function finish(done) {
-        if (++finished == total) { done(); }
+        if (++finished === total) { done(); }
       }
 
       answers.async(true).then(function(result) {

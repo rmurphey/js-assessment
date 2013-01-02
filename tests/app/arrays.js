@@ -1,3 +1,4 @@
+/*globals describe:true, it:true, expect:true, beforeEach:true */
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
 if (typeof expect !== 'function') { var expect = require('expect.js'); }
 
@@ -29,6 +30,8 @@ define([
     });
 
     it("you should be able to remove a value from an array, returning the original array", function() {
+      a.splice( 1, 0, 2 );
+      a.push( 2 );
       a.push( 2 );
 
       var result = answers.removeWithoutCopy(a, 2);

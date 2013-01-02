@@ -1,3 +1,4 @@
+/*globals mocha:true */
 var tests = [
   // link to test files here
   'tests/app/bestPractices',
