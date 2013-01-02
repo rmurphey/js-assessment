@@ -9,28 +9,7 @@ module.exports = function(grunt) {
         '!app/bestPractices.js'
       ],
       options: {
-        "node" : true,
-        "browser" : true,
-
-        "boss" : false,
-        "curly": false,
-        "debug": false,
-        "devel": false,
-        "eqeqeq": true,
-        "evil": true,
-        "forin": false,
-        "immed": true,
-        "laxbreak": false,
-        "newcap": true,
-        "noarg": true,
-        "noempty": false,
-        "nonew": false,
-        "nomen": false,
-        "plusplus": false,
-        "regexp": false,
-        "undef": true,
-        "sub": true,
-        "strict": false
+        jshintrc: '.jshintrc'
       }
     }
   });
