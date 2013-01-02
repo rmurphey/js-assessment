@@ -10,7 +10,7 @@ define(function() {
       // 'fizzbuzz';
       //
       // otherwise the function should return the number, or false if no number
-      // was provided
+      // was provided or the value provided is not a number
     }
   };
 });
