@@ -7,7 +7,7 @@ define([
   'app/recursion',
   'underscore'
 ], function(answers, _) {
-  describe("recursion", function() {
+  describe('recursion', function() {
     var fileData = {
       dir : 'app',
       files : [
@@ -37,7 +37,7 @@ define([
       ]
     };
 
-    it("you should be able to return a list of files from the data", function() {
+    it('you should be able to return a list of files from the data', function() {
       var result = answers.listFiles(fileData);
       expect(result.length).to.eql(8);
       expect(result.indexOf('index.html') > -1).to.be.ok;
@@ -45,7 +45,7 @@ define([
       expect(result.indexOf('underscore.js') > -1).to.be.ok;
     });
 
-    it("you should be able to return a list of files in a subdir", function() {
+    it('you should be able to return a list of files in a subdir', function() {
       var result = answers.listFiles(fileData, 'js');
       expect(result.length).to.eql(5);
       expect(result.indexOf('main.js') > -1).to.be.ok;
@@ -53,7 +53,7 @@ define([
     });
   });
 
-  describe("permutation", function() {
+  describe('permutation', function() {
     var arr = [ 1, 2, 3, 4 ];
     var answer = [
       [1, 2, 3, 4],
@@ -82,7 +82,7 @@ define([
       [4, 3, 2, 1]
     ];
 
-    it("you should be able to return the permutations of an array", function() {
+    it('you should be able to return the permutations of an array', function() {
       var result = answers.permute(arr);
       var resultStrings = _.map(result, function(r) { return r.join(''); });
 

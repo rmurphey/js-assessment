@@ -20,5 +20,6 @@
   "regexp": false,
   "undef": true,
   "sub": true,
-  "strict": false
+  "strict": false,
+  "quotmark": "single"
 }
