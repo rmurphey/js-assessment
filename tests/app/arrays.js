@@ -27,6 +27,9 @@ define([
 
       expect(result).to.have.length(3);
       expect(result.join(' ')).to.eql('1 3 4');
+
+      // make sure that you didn't change the original array instance
+      expect(result).not.to.equal(a);
     });
 
     it('you should be able to remove a value from an array, returning the original array', function() {
