@@ -14,7 +14,7 @@ define(function() {
 
     },
     
-    removeWithoutCopy : function(arr, item) {
+    removeWithCopy : function(arr, item) {
 
     },
 

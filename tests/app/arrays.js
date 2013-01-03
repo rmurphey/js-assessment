@@ -28,22 +28,22 @@ define([
       expect(result).to.have.length(3);
       expect(result.join(' ')).to.eql('1 3 4');
 
-      // make sure that you didn't change the original array instance
-      expect(result).not.to.equal(a);
+      // make sure that you return the same array instance
+      expect(result).equal(a);
     });
 
-    it('you should be able to remove a value from an array, returning the original array', function() {
+    it('you should be able to return a copy of an array with certain values removed', function() {
       a.splice( 1, 0, 2 );
       a.push( 2 );
       a.push( 2 );
 
-      var result = answers.removeWithoutCopy(a, 2);
+      var result = answers.removeWithCopy(a, 2);
 
       expect(result).to.have.length(3);
       expect(result.join(' ')).to.eql('1 3 4');
 
-      // make sure that you return the same array instance
-      expect(result).equal(a);
+      // make sure that you didn't change the original array instance
+      expect(result).not.to.equal(a);
     });
 
     it('you should be able to add an item to the end of an array', function() {
