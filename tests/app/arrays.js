@@ -25,26 +25,30 @@ define([
       a.push(2); // Make sure the value appears more than one time
       var result = answers.remove(a, 2);
 
+      expect(result).equal(a);
+
       expect(result).to.have.length(3);
       expect(result.join(' ')).to.eql('1 3 4');
     });
 
-    it('you should be able to remove a value from an array, returning the original array', function() {
+    it('you should be able to return a copy of an array with certain values removed', function() {
       a.splice( 1, 0, 2 );
       a.push( 2 );
       a.push( 2 );
 
-      var result = answers.removeWithoutCopy(a, 2);
+      var result = answers.removeWithCopy(a, 2);
 
       expect(result).to.have.length(3);
       expect(result.join(' ')).to.eql('1 3 4');
 
-      // make sure that you return the same array instance
-      expect(result).equal(a);
+      // make sure that you didn't change the original array instance
+      expect(result).not.to.equal(a);
     });
 
     it('you should be able to add an item to the end of an array', function() {
       var result = answers.append(a, 10);
+
+      expect(result).equal(a);
 
       expect(result).to.have.length(5);
       expect(result[result.length - 1]).to.eql(10);
@@ -52,6 +56,8 @@ define([
 
     it('you should be able to remove the last item of an array', function() {
       var result = answers.truncate(a);
+
+      expect(result).equal(a);
 
       expect(result).to.have.length(3);
       expect(result.join(' ')).to.eql('1 2 3');
@@ -61,12 +67,19 @@ define([
       var c = [ 'a', 'b', 'c', 1 ],
           result = answers.concat(a, c);
 
+      expect(result).equal(a);
+
+      // origin is unaltered
+      expect(c.join(' ')).to.eql('a b c 1');
+
       expect(result).to.have.length(8);
       expect(result.join(' ')).to.eql('1 2 3 4 a b c 1');
     });
 
     it('you should be able to add an item anywhere in an array', function() {
       var result = answers.insert(a, 'z', 2);
+
+      expect(result).equal(a);
 
       expect(result).to.have.length(5);
       expect(result.join(' ')).to.eql('1 2 z 3 4');
