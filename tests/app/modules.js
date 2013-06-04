@@ -5,8 +5,8 @@ if (typeof expect !== 'function') { var expect = require('expect.js'); }
 define([
   'app/modules'
 ], function(answers) {
-  describe('the module pattern', function() {
-    it('you should be able to create a function that returns a module', function() {
+  describe('模組', function() {
+    it('函式回傳模組（物件）', function() {
       var module = answers.createModule('hello', 'matt');
 
       expect(module.sayIt).to.be.a('function');

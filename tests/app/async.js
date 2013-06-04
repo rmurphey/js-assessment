@@ -5,8 +5,8 @@ if (typeof expect !== 'function') { var expect = require('expect.js'); }
 define([
   'app/async'
 ], function(answers) {
-  describe('async behavior', function() {
-    it('you should understand how to use promises to handle asynchronicity', function(done) {
+  describe('非同步', function() {
+    it('使用jQuery的promise', function(done) {
       var flag = false;
       var finished = 0;
       var total = 2;
@@ -30,7 +30,7 @@ define([
       expect(flag).to.eql(false);
     });
 
-    it('you should be able to receive data from the server and manipulate it', function(done) {
+    it('從伺服端抓取資料並操作', function(done) {
       var url = '/data/testdata.json';
 
       answers.manipulateRemoteData(url).then(function(result) {

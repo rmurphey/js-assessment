@@ -6,8 +6,8 @@ if (typeof expect !== 'function') { var expect = require('expect.js'); }
 define([
   'app/flowControl'
 ], function(answers) {
-  describe('flow control', function() {
-    it('you should be able to conditionally branch your code', function() {
+  describe('流程控制', function() {
+    it('依據不同參數執行不同程式區段', function() {
       var num = 0;
 
       while (num % 3 === 0 || num % 5 === 0) {

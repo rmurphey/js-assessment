@@ -7,7 +7,7 @@ define([
   'app/recursion',
   'underscore'
 ], function(answers, _) {
-  describe('recursion', function() {
+  describe('遞迴', function() {
     var fileData = {
       dir : 'app',
       files : [
@@ -37,7 +37,7 @@ define([
       ]
     };
 
-    it('you should be able to return a list of files from the data', function() {
+    it('回傳檔案列表', function() {
       var result = answers.listFiles(fileData);
       expect(result.length).to.eql(8);
       expect(result.indexOf('index.html') > -1).to.be.ok;
@@ -45,7 +45,7 @@ define([
       expect(result.indexOf('underscore.js') > -1).to.be.ok;
     });
 
-    it('you should be able to return a list of files in a subdir', function() {
+    it('回傳某一資料夾下的檔案列表', function() {
       var result = answers.listFiles(fileData, 'js');
       expect(result.length).to.eql(5);
       expect(result.indexOf('main.js') > -1).to.be.ok;

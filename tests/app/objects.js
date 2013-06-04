@@ -5,7 +5,7 @@ if (typeof expect !== 'function') { var expect = require('expect.js'); }
 define([
   'app/objects'
 ], function(answers) {
-  describe('objects and context', function() {
+  describe('物件與內容(context)', function() {
     var a, b, C;
 
     beforeEach(function() {
@@ -29,12 +29,12 @@ define([
       };
     });
 
-    it('you should be able to alter the context in which a method runs', function() {
+    it('更改實例函式(method)的內容(context)', function() {
       // define a function for fn so that the following will pass
       expect(answers.alterContext(a.sayIt, b)).to.eql('Yo, Rebecca!');
     });
 
-    it('you should be able to alter multiple objects at once', function() {
+    it('物件共用變數', function() {
       // define a function for fn so that the following will pass
       var obj1 = new C('Rebecca'),
           obj2 = new C('Melissa'),
@@ -47,7 +47,7 @@ define([
       expect(new C('Ellie').greeting).to.eql(greeting);
     });
 
-    it('you should be able to iterate over an object\'s "own" properties', function() {
+    it('列舉物件屬性', function() {
       // define a function for fn so that the following will pass
       var C = function() {
         this.foo = 'bar';
