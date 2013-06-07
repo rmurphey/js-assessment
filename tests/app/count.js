@@ -5,6 +5,12 @@ if (typeof expect !== 'function') { var expect = require('expect.js'); }
 define([
   'app/count'
 ], function(answers) {
+  /**
+   * This test describes a function, count, that takes two arguments: a starting number,
+   * and an ending number. The function should console.log each number from the start
+   * number to the end number, one number per second. The function should return an object
+   * with a cancel method, which should cancel the counting.
+   */
   describe('counter', function () {
     var nums;
 
@@ -33,6 +39,18 @@ define([
         expect(nums.length).to.eql(5);
         expect(nums[0]).to.eql(1);
         expect(nums[4]).to.eql(5);
+        done();
+      }, 5500);
+    });
+
+    it('should provide a method to cancel the counting', function (done) {
+      this.timeout(6000);
+
+      var counter = answers.count(1, 5);
+      counter.cancel();
+
+      setTimeout(function () {
+        expect(nums.length < 5).to.be.ok;
         done();
       }, 5500);
     });
