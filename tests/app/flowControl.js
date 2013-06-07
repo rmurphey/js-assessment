@@ -11,7 +11,7 @@ define([
       var num = 0;
 
       while (num % 3 === 0 || num % 5 === 0) {
-          num = Math.floor(Math.random() * 10) + 1;
+        num = Math.floor(Math.random() * 10) + 1;
       }
 
       expect(answers.fizzBuzz()).not.to.be.ok;
