@@ -65,7 +65,7 @@ define([
     });
 
     it('you should be able to remove the first item of an array', function () {
-      var result = answers.shorten(a);
+      var result = answers.curtail(a);
 
       expect(result).to.have.length(3);
       expect(result.join(' ')).to.eql('2 3 4');

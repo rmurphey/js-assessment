@@ -30,7 +30,7 @@ define(function() {
 
     },
 
-    shorten : function(arr) {
+    curtail : function(arr) {
 
     },
 
