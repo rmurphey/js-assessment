@@ -10,7 +10,8 @@ var tests = [
   'tests/app/logicalOperators',
   'tests/app/regex',
   'tests/app/recursion',
-  'tests/app/numbers'
+  'tests/app/numbers',
+  'tests/app/count'
 ];
 
 if (typeof window !== 'undefined') {
