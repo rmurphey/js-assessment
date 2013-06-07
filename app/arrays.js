@@ -26,6 +26,14 @@ define(function() {
 
     },
 
+    prepend : function(arr, item) {
+
+    },
+
+    curtail : function(arr) {
+
+    },
+
     concat : function(arr1, arr2) {
 
     },

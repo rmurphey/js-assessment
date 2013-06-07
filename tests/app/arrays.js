@@ -57,6 +57,20 @@ define([
       expect(result.join(' ')).to.eql('1 2 3');
     });
 
+    it('you should be able to add an item to the beginning of an array', function () {
+      var result = answers.prepend(a, 10);
+
+      expect(result).to.have.length(5);
+      expect(result[0]).to.eql(10);
+    });
+
+    it('you should be able to remove the first item of an array', function () {
+      var result = answers.curtail(a);
+
+      expect(result).to.have.length(3);
+      expect(result.join(' ')).to.eql('2 3 4');
+    });
+
     it('you should be able to join together two arrays', function() {
       var c = [ 'a', 'b', 'c', 1 ],
           result = answers.concat(a, c);
