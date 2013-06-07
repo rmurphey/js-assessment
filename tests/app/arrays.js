@@ -93,7 +93,7 @@ define([
     });
 
     it('you should be able to find duplicates in an array', function() {
-      var result = answers.duplicates([ 1, 2, 4, 4, 3, 3, 1, 5 ]);
+      var result = answers.duplicates([ 1, 2, 4, 4, 3, 3, 1, 5, 3 ]);
 
       expect(result).to.have.length(3);
       expect(result.sort().join(' ')).to.eql('1 3 4');
