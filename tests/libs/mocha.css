@@ -152,6 +152,7 @@ body {
 
 #mocha ul#stats {
   position: fixed;
+  z-index: 1;
   top: 15px;
   right: 10px;
   background: #fff;
