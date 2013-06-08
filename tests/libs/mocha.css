@@ -150,10 +150,13 @@ body {
   letter-spacing: 1px;
 }
 
-#stats {
+#mocha ul#stats {
   position: fixed;
   top: 15px;
   right: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 8px 5px 5px;
   font-size: 12px;
   margin: 0;
   color: #888;
