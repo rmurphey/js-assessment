@@ -46,15 +46,13 @@ define([
 
     it('you should be able to use closures', function () {
       var arr = [ Math.random(), Math.random(), Math.random(), Math.random() ];
-      var doSomeStuff;
+      var square = function (x) { return x * x; };
 
-      doSomeStuff = function (x) { return x * x; };
-
-      var funcs = answers.makeClosures(arr, doSomeStuff);
+      var funcs = answers.makeClosures(arr, square);
       expect(funcs).to.have.length(arr.length);
 
       for (var i = 0; i < arr.length; i++) {
-        expect(funcs[i]()).to.eql(doSomeStuff(arr[i]));
+        expect(funcs[i]()).to.eql(square(arr[i]));
       }
     });
 
