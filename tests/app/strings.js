@@ -16,15 +16,15 @@ define([
 
     it('you should be able to wrap lines at some arbitrary count, but don\'t break words', function() {
       //create the data
-      var formatted_str;
+      var formattedStr;
       var data = [
         'abcdef abcde abc def',
         'abc abc abc',
         'a b c def'
       ];
-      var wrap_col = 5;
+      var wrapCol = 5;
 
-      var computed_data = [
+      var computedData = [
         'abcdef\nabcde\nabc\ndef',
         'abc\nabc\nabc',
         'a b c\ndef'
@@ -32,11 +32,11 @@ define([
 
 
       data.forEach(function(str, index) {
-        formatted_str = answers.wordwrap(str, wrap_col);
+        formattedStr = answers.wordWrap(str, wrapCol);
         //every char at the wrap line should be a space
-        expect(formatted_str).to.eql(computed_data[index]);
+        expect(formattedStr).to.eql(computedData[index]);
         //the last characters should still be the last characters
-        expect(formatted_str.charAt(formatted_str.length-1)).to.eql(computed_data[index].charAt(computed_data[index].length-1));
+        expect(formattedStr.charAt(formattedStr.length-1)).to.eql(computedData[index].charAt(computedData[index].length-1));
       });
 
     });
