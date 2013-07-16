@@ -84,14 +84,13 @@ define([
 
     it('you should be able to return the permutations of an array', function() {
       var result = answers.permute(arr);
-      var resultStrings = (function(cb) { return result.map ? result.map(cb) : _.map(result, cb); })(function(r) { return r.join(''); });
+      var resultStrings = _.map(result, function(r) { return r.join(''); });
 
       expect(result.length).to.eql(answer.length);
 
-
-        (function(cb) { answer.forEach ? answer.forEach(cb) : _.each(answer, cb); }(function(a) {
-            expect(resultStrings.indexOf(a.join('')) > -1).to.be.ok;
-        }));
+      _.each(answer, function(a) {
+        expect(resultStrings.indexOf(a.join('')) > -1).to.be.ok;
+      });
     });
   });
 
