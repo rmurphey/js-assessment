@@ -38,6 +38,11 @@ You can also develop with live-reload and grunt-watch if that's your thing:
     npm install
     grunt develop
 
+## I need help!
+
+There may be friendly folks willing to help you in \#js-assessment or
+\#jshotline on freenode IRC.
+
 ## I want to contribute tests; what do I do?
 
 Submit a pull request! The tests are currently loosely organized by topic, so
