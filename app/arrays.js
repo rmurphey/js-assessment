@@ -14,11 +14,23 @@ define(function() {
 
     },
 
+    removeWithoutCopy : function(arr, item) {
+
+    },
+
     append : function(arr, item) {
 
     },
 
     truncate : function(arr) {
+
+    },
+
+    prepend : function(arr, item) {
+
+    },
+
+    curtail : function(arr) {
 
     },
 

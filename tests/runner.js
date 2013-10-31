@@ -1,3 +1,4 @@
+/*globals mocha:true */
 var tests = [
   // link to test files here
   'tests/app/bestPractices',
@@ -6,7 +7,11 @@ var tests = [
   'tests/app/functions',
   'tests/app/modules',
   'tests/app/flowControl',
-  'tests/app/logicalOperators'
+  'tests/app/logicalOperators',
+  'tests/app/regex',
+  'tests/app/recursion',
+  'tests/app/numbers',
+  'tests/app/count'
 ];
 
 if (typeof window !== 'undefined') {

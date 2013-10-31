@@ -12,10 +12,15 @@
   <div id="test"></div>
 
   <script src="/lib/jquery.js"></script>
-  <script src="/tests/libs/expect.js"></script>
+  <script src="/tests/libs/chai.js"></script>
   <script src="/tests/libs/mocha.js"></script>
-  <script>mocha.setup('bdd')</script>
+  <script>
+    window.expect = chai.expect;
+    mocha.setup('bdd');
+  </script>
 
   <script src="/lib/require.js" data-main="app/config"></script>
+  <!-- livereload snippet -->
+  <script src="http://localhost:35729/livereload.js"></script>
 </body>
 </html>

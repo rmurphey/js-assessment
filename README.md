@@ -7,19 +7,19 @@ on Rebecca Murphey's js-assessment framework.
 
 ## How do I begin?
 
-1. If you don't have a github account, [sign up](https://github.com/signup/free)!
-2. Fork this repo to your own github repo
+1. If you don't have a Github account, [sign up](https://github.com/signup/free)!
+2. Fork this repo to your own Github repo
 3. Clone the repo locally on your own computer
-4. Implement the functions in each of the scriptes located in app/
+4. Implement the functions in each of the scripts located in the `app/` dir
 5. Test your results as described below
-6. Commit your changes to your personal github repo (There is no need to submit a pull request)
+6. Commit your changes to your personal Github repo (No need to submit a pull request)
 7. Email us the link to your repo so that we can review your results
 
 Note: You may receive notifications that your repo has been followed or forked by a PROS employee.
 These actions are simply part of the review process.
 
-
 ## I want to work on the tests; what do I do?
+
 To use the tests, you will need to install Node -- you can do this via the
 [download page](http://nodejs.org/#download) or using
 [Homebrew](http://mxcl.github.com/homebrew/) if you are on a Mac.
@@ -48,7 +48,18 @@ You can also run (most of) the tests on the command line:
 
 The command line runner is a work in progress; contributions welcome :)
 
+You can also develop with live-reload and grunt-watch if that's your thing:
 
+    npm install -g grunt-cli
+    npm install
+    grunt develop
+
+## I need help!
+
+There may be friendly folks willing to help you in \#js-assessment or
+\#jshotline on freenode IRC.
+
+---
 
 # For PROS Employees
 
