@@ -7,7 +7,6 @@ define([
   'app/logicalOperators'
 ], function(answers) {
   describe('logical operators', function(){
-      
     it('you should be able to work with logical or', function() {
       expect(answers.or(true, false)).to.be.ok;
       expect(answers.or(true, true)).to.be.ok;
@@ -21,6 +20,5 @@ define([
       expect(answers.and(true, true)).to.be.ok;
       expect(answers.and(3, 4)).to.be.ok;
     });
-
   });
 });
