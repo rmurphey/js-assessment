@@ -81,7 +81,7 @@ keep them up to date.
 ## I hate \<some technology you've chosen\>
 
 This repo uses [RequireJS](http://requirejs.org) for dependency management and
-[Mocha](http://visionmedia.github.com/mocha/) and [expect.js](https://github.com/LearnBoost/expect.js/blob/master/README.md)
+[Mocha](http://visionmedia.github.com/mocha/) and [Chai](http://chaijs.com/)
 for the tests themselves. It uses the BDD style for authoring tests. If this
 doesn't suit you, please fork away, or, better, submit a pull request that lets
 this be more flexible than it currently is.
