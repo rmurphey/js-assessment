@@ -92,6 +92,21 @@ define([
         expect(resultStrings.indexOf(a.join('')) > -1).to.be.ok;
       });
     });
+
+    it('you should be able to return the nth number in a fibonacci sequence', function() {
+      expect(answers.fibonacci(2)).to.eql(1);
+      expect(answers.fibonacci(6)).to.eql(8);
+    });
+
+    it('you should be able to return the set of all valid combinations of n pairs of parentheses.', function() {
+      var expected = [ '((()))', '(()())', '(())()', '()(())', '()()()'];
+      var result = answers.validParentheses(3);
+
+      expect(result.length).to.eql(5);
+      _.each(expected, function(c) {
+        expect(result).to.contain(c);
+      });
+    });
   });
 
 });
