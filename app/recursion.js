@@ -8,6 +8,14 @@ define(function() {
 
     permute: function(arr) {
 
+    },
+
+    fibonacci: function(n) {
+
+    },
+
+    validParentheses: function(n) {
+
     }
   };
 });
