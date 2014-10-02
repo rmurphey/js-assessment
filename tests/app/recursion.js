@@ -100,7 +100,7 @@ define([
 
     it('you should be able to return the set of all valid combinations of n pairs of parentheses.', function() {
       var expected = [ '((()))', '(()())', '(())()', '()(())', '()()()'];
-      var result = answers.validParen(3);
+      var result = answers.validParentheses(3);
 
       expect(result.length).to.eql(5);
       _.each(expected, function(c) {
