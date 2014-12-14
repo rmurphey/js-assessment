@@ -12,19 +12,27 @@ define([
    * number to the end number, one number per 1/10th of a second. The function should
    * return an object with a cancel method, which should cancel the counting.
    */
+  'use strict';
+
   describe('counter', function () {
-    var nums;
+    var nums, origConsoleLog;
 
     beforeEach(function () {
       nums = [];
 
       if (typeof console === 'undefined') {
-        console = {};
+        console = {
+          log: undefined,
+        };
       }
-
+      origConsoleLog = console.log;
       console.log = function (val) {
         nums.push(val);
       };
+    });
+
+    afterEach(function () {
+      console.log = origConsoleLog;
     });
 
     it('should count from start number to end number, one per 1/10th of a second', function (done) {
