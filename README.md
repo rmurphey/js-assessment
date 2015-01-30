@@ -1,5 +1,7 @@
 # A test-driven JS assessment
 
+[![Join the chat at https://gitter.im/rmurphey/js-assessment](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rmurphey/js-assessment?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This repo includes a set of tests that can be used to assess the skills of
 a candidate for a JavaScript position, or to improve one's own skills.
 
