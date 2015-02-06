@@ -6,10 +6,14 @@ if (typeof expect !== 'function') { var expect = require('expect.js'); }
 define([
   'app/bestPractices'
 ], function(answers) {
+  var global = typeof window !== 'undefined' ? window :
+               typeof global !== 'undefined' ? global :
+               (function(){ return this; })(); // will not work in strict mode
+
   describe('best practices', function(){
     it('you should avoid global variables', function() {
       answers.globals();
-      expect(window.myObject).not.to.be.ok;
+      expect(global.myObject).not.to.be.ok;
     });
 
     it('you should declare functions safely', function() {

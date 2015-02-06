@@ -84,11 +84,11 @@ define([
 
     it('you should be able to return the permutations of an array', function() {
       var result = answers.permute(arr);
-      var resultStrings = _.map(result, function(r) { return r.join(''); });
+      var resultStrings = result.map(function(r) { return r.join(''); });
 
       expect(result.length).to.eql(answer.length);
 
-      _.each(answer, function(a) {
+      answer.forEach(function(a) {
         expect(resultStrings.indexOf(a.join('')) > -1).to.be.ok;
       });
     });
@@ -103,7 +103,7 @@ define([
       var result = answers.validParentheses(3);
 
       expect(result.length).to.eql(5);
-      _.each(expected, function(c) {
+      expected.forEach(function(c) {
         expect(result).to.contain(c);
       });
     });
