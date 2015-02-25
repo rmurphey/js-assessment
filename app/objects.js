@@ -12,6 +12,10 @@ define(function() {
 
     iterate : function(obj) {
 
+    },
+
+    iterate2 : function(obj) {
+
     }
   };
 });

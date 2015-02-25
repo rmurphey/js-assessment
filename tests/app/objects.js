@@ -60,5 +60,20 @@ define([
 
       expect(answers.iterate(obj)).to.eql([ 'foo: bar', 'baz: bim' ]);
     });
+
+    it('you should be able to iterate over an object\'s "own" properties', function() {
+      // define a function for fn so that the following will pass
+      var C = function() {
+        this.foo = 'bar';
+        this.baz = 'bim';
+        this.hasOwnProperty = 'devious';
+      };
+
+      C.prototype.bop = 'bip';
+
+      var obj = new C();
+
+      expect(answers.iterate2(obj)).to.eql([ 'foo: bar', 'baz: bim', 'hasOwnProperty: devious' ]);
+    });
   });
 });
