@@ -9,7 +9,7 @@ define([
     it('you should understand how to use promises to handle asynchronicity', function(done) {
       var flag = false;
       var finished = 0;
-      var total = 2;
+      var total = 3;
 
       function finish(done) {
         if (++finished === total) { done(); }
@@ -28,6 +28,7 @@ define([
       });
 
       expect(flag).to.eql(false);
+      finish(done);
     });
 
     it('you should be able to receive data from the server and manipulate it', function(done) {
