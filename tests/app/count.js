@@ -15,7 +15,8 @@ define([
   'use strict';
 
   describe('counter', function () {
-    var nums, origConsoleLog;
+    var nums;
+    var origConsoleLog;
 
     beforeEach(function () {
       nums = [];

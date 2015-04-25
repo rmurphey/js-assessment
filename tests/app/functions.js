@@ -28,8 +28,8 @@ define([
     it('you should be able to change the context in which a function is called', function() {
       var speak = function() {
             return sayIt(this.greeting, this.name, '!!!');
-          },
-          obj = {
+          };
+      var obj = {
             greeting : 'Hello',
             name : 'Rebecca'
           };
@@ -63,10 +63,10 @@ define([
     });
 
     it('you should be able to use arguments', function () {
-      var a = Math.random(),
-          b = Math.random(),
-          c = Math.random(),
-          d = Math.random();
+      var a = Math.random();
+      var b = Math.random();
+      var c = Math.random();
+      var d = Math.random();
 
       expect(answers.useArguments(a)).to.eql(a);
       expect(answers.useArguments(a, b)).to.eql(a + b);
@@ -76,7 +76,9 @@ define([
 
     it('you should be able to apply functions with arbitrary numbers of arguments', function () {
       (function () {
-        var a = Math.random(), b = Math.random(), c = Math.random();
+        var a = Math.random();
+        var b = Math.random();
+        var c = Math.random();
 
         var wasITake2ArgumentsCalled = false;
         var iTake2Arguments = function (firstArgument, secondArgument) {
@@ -111,7 +113,9 @@ define([
         return x / y * z;
       };
 
-      var a = Math.random(), b = Math.random(), c = Math.random();
+      var a = Math.random();
+      var b = Math.random();
+      var c = Math.random();
       expect(answers.partialUsingArguments(partialMe)(a, b, c)).to.eql(partialMe(a, b, c));
       expect(answers.partialUsingArguments(partialMe, a)(b, c)).to.eql(partialMe(a, b, c));
       expect(answers.partialUsingArguments(partialMe, a, b)(c)).to.eql(partialMe(a, b, c));
@@ -123,7 +127,10 @@ define([
         return x / y * z;
       };
 
-      var a = Math.random(), b = Math.random(), c = Math.random(), result;
+      var a = Math.random();
+      var b = Math.random();
+      var c = Math.random();
+      var result;
 
       result = answers.curryIt(curryMe);
       expect(typeof result).to.eql('function');

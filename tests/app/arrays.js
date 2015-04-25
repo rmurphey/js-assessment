@@ -72,8 +72,8 @@ define([
     });
 
     it('you should be able to join together two arrays', function() {
-      var c = [ 'a', 'b', 'c', 1 ],
-          result = answers.concat(a, c);
+      var c = [ 'a', 'b', 'c', 1 ];
+      var result = answers.concat(a, c);
 
       expect(result).to.have.length(8);
       expect(result.join(' ')).to.eql('1 2 3 4 a b c 1');
