@@ -6,7 +6,9 @@ define([
   'app/objects'
 ], function(answers) {
   describe('objects and context', function() {
-    var a, b, C;
+    var a;
+    var b;
+    var C;
 
     beforeEach(function() {
       a = {
@@ -36,9 +38,9 @@ define([
 
     it('you should be able to alter multiple objects at once', function() {
       // define a function for fn so that the following will pass
-      var obj1 = new C('Rebecca'),
-          obj2 = new C('Melissa'),
-          greeting = 'What\'s up';
+      var obj1 = new C('Rebecca');
+      var obj2 = new C('Melissa');
+      var greeting = 'What\'s up';
 
       answers.alterObjects(C, greeting);
 
