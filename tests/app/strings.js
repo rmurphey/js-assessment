@@ -5,7 +5,6 @@ if (typeof expect !== 'function') { var expect = require('expect.js'); }
 define([
   'app/strings'
 ], function(answers) {
-
   describe('strings', function() {
     it('you should be able to reduce duplicate characters to a desired minimum', function() {
       expect(answers.reduceString('aaaabbbb', 2)).to.eql('aabb');
@@ -14,46 +13,41 @@ define([
       expect(answers.reduceString('aaxxxaabbbb', 2)).to.eql('aaxxaabb');
     });
 
-    it('you should be able to wrap lines at some arbitrary count, but don\'t break words', function() {
-      //create the data
-      var formattedStr;
-      var data = [
+    it('you should be able to wrap lines at a given number of columns, without breaking words', function() {
+      var wrapCol = 5;
+      var inputStrings = [
         'abcdef abcde abc def',
         'abc abc abc',
         'a b c def'
       ];
-      var wrapCol = 5;
-
-      var computedData = [
+      var outputStrings = [
         'abcdef\nabcde\nabc\ndef',
         'abc\nabc\nabc',
         'a b c\ndef'
       ];
+      var formattedStr;
 
-
-      data.forEach(function(str, index) {
+      inputStrings.forEach(function(str, index) {
         formattedStr = answers.wordWrap(str, wrapCol);
-        //every char at the wrap line should be a space
-        expect(formattedStr).to.eql(computedData[index]);
-        //the last characters should still be the last characters
-        expect(formattedStr.charAt(formattedStr.length-1)).to.eql(computedData[index].charAt(computedData[index].length-1));
+        expect(formattedStr).to.eql(outputStrings[index]);
       });
-
     });
+
     it('you should be able to reverse a string', function() {
-      var data = [
+      var inputStrings = [
         'abc',
         'i am a string of characters',
         'A man, a plan, a canal: Panama'
       ];
+      var outputStrings = [
+        'cba',
+        'sretcarahc fo gnirts a ma i',
+        'amanaP :lanac a ,nalp a ,nam A'
+      ];
 
-      data.forEach(function(str) {
+      inputStrings.forEach(function(str, index) {
         var result = answers.reverseString(str);
-        //should be same length
-        expect(result.length).to.eql(str.length);
-        //middle character should be the same
-        var mid = Math.floor(result.length);
-        expect(result.charAt(mid)).to.eql(str.charAt(mid));
+        expect(result).to.eql(outputStrings[index]);
       });
     });
   });
