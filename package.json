@@ -32,5 +32,6 @@
   },
   "bugs": {
     "url": "https://github.com/rmurphey/js-assessment/issues"
-  }
+  },
+  "private": true
 }
