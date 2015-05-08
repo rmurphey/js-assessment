@@ -9,28 +9,28 @@
     "url": "git://github.com/rmurphey/js-assessment.git"
   },
   "engines": {
-    "node": "~0.6.8"
+    "node": "0.12.x"
   },
   "dependencies": {
-    "express" : "2.5.x",
-    "underscore" : "1.3.x",
-    "amdefine" : "0.0.2",
-    "expect.js" : "0.1.2",
-    "grunt" : "~0.4.0",
-    "grunt-contrib-jshint" : "~0.1.0"
+    "amdefine": "0.0.2",
+    "expect.js": "0.1.2",
+    "grunt": "0.4.0",
+    "grunt-contrib-connect": "^0.10.1",
+    "grunt-contrib-jshint": "~0.1.0",
+    "mocha": "^2.2.4",
+    "underscore": "1.8.x"
   },
   "devDependencies": {
-    "mocha" : "1.2.x",
-    "requirejs" : "1.0.x",
-    "grunt-contrib-livereload" : "~0.1.2",
-    "grunt-contrib-watch" : "~0.4.4"
+    "mocha": "2.2.x",
+    "requirejs": "2.1.x",
+    "grunt-contrib-connect": "^0.10.1",
+    "grunt-contrib-watch": "~0.4.4"
   },
   "scripts": {
-    "start": "node bin/serve",
+    "start": "node index.js",
     "test": "./node_modules/mocha/bin/mocha -R spec tests/runner.js"
   },
-  "bin" : "bin/serve",
-  "bugs" : {
-    "url" : "https://github.com/rmurphey/js-assessment/issues"
+  "bugs": {
+    "url": "https://github.com/rmurphey/js-assessment/issues"
   }
 }

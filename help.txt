@@ -1,4 +1,4 @@
-To work on the tests, open a browser and visit http://localhost:{{port}}.
+To work on the tests, open a browser and visit http://{{host}}:{{port}}.
 
 The tests are in files in the tests/app directory; you will need to fill out
 the answers in the corresponding files in the app directory, reloading your
