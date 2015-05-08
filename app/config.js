@@ -5,15 +5,14 @@ require.config({
 
   paths : {
     // JavaScript folders
-    lib : '../lib',
     plugins : '../lib/plugins',
     tests : '../tests',
     app : '../app',
 
     // Libraries
-    jquery : '../lib/jquery',
-    underscore : '../lib/underscore',
-    backbone : '../lib/backbone',
+    jquery : '../node_modules/jquery/dist/jquery',
+    underscore : '../node_modules/underscore/underscore',
+    backbone : '../node_modules/backbone/backbone',
 
     // Require plugin
     text : '../lib/plugins/text'

@@ -23,12 +23,12 @@ if (typeof window !== 'undefined') {
     nodeRequire : require,
     paths : {
       // Libraries
-      underscore : 'lib/underscore',
+      underscore : 'node_modules/underscore/underscore',
 
       // Shim Plugin
       use : 'lib/plugins/use',
       text : 'lib/plugins/text',
-      jquery : 'lib/jquery'
+      jquery : 'node_modules/jquery/dist/jquery'
     },
 
     use : {

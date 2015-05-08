@@ -13,19 +13,18 @@
   },
   "dependencies": {
     "amdefine": "0.0.2",
+    "backbone": "^1.1.2",
+    "chai": "^2.3.0",
     "expect.js": "0.1.2",
     "finalhandler": "^0.3.5",
     "grunt": "0.4.0",
     "grunt-contrib-connect": "^0.10.1",
     "grunt-contrib-jshint": "~0.1.0",
+    "grunt-contrib-watch": "~0.4.4",
     "mocha": "^2.2.4",
+    "requirejs": "^2.1.17",
     "serve-static": "^1.9.2",
     "underscore": "1.8.x"
-  },
-  "devDependencies": {
-    "requirejs": "2.1.x",
-    "grunt-contrib-connect": "^0.10.1",
-    "grunt-contrib-watch": "~0.4.4"
   },
   "scripts": {
     "start": "node index.js",

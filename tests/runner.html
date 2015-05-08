@@ -4,22 +4,22 @@
   <meta charset="utf-8">
   <title>Mocha Tests</title>
 
-  <link rel="stylesheet" href="/tests/libs/mocha.css" />
+  <link rel="stylesheet" href="/node_modules/mocha/mocha.css" />
 
 </head>
 <body>
   <div id="mocha"></div>
   <div id="test"></div>
 
-  <script src="/lib/jquery.js"></script>
-  <script src="/tests/libs/chai.js"></script>
-  <script src="/tests/libs/mocha.js"></script>
+  <script src="/node_modules/jquery/dist/jquery.js"></script>
+  <script src="/node_modules/chai/chai.js"></script>
+  <script src="/node_modules/mocha/mocha.js"></script>
   <script>
     window.expect = chai.expect;
     mocha.setup('bdd');
   </script>
 
-  <script src="/lib/require.js" data-main="app/config"></script>
+  <script src="/node_modules/requirejs/require.js" data-main="app/config"></script>
   <!-- livereload snippet -->
   <script src="http://localhost:35729/livereload.js"></script>
 </body>
