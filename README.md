@@ -7,7 +7,7 @@ a candidate for a JavaScript position, or to improve one's own skills.
 
 ## I want to work on the tests; what do I do?
 To use the tests, you will need to install Node -- you can do this via the
-[download page](http://nodejs.org/#download) or using
+[download page](https://nodejs.org/download/) or using
 [Homebrew](http://mxcl.github.com/homebrew/) if you are on a Mac.
 
 Note that on Windows, there are some reports that you will need to restart
