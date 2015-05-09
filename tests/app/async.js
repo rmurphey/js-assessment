@@ -30,7 +30,7 @@ define([
       expect(flag).to.eql(false);
     });
 
-    it('you should be able to receive data from the server and manipulate it', function(done) {
+    it('you should be able to retrieve data from the server and return a sorted array of names', function(done) {
       var url = '/data/testdata.json';
 
       answers.manipulateRemoteData(url).then(function(result) {
