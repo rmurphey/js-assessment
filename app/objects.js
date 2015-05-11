@@ -1,4 +1,6 @@
-window.objectsAnswers =  {
+typeof window === 'undefined' ? exports = global : exports = window
+
+exports.objectsAnswers =  {
   alterContext : function(fn, obj) {
 
   },

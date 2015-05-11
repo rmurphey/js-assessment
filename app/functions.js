@@ -1,4 +1,6 @@
-window.functionsAnswers = {
+typeof window === 'undefined' ? exports = global : exports = window
+
+exports.functionsAnswers = {
   argsAsArray : function(fn, arr) {
 
   },

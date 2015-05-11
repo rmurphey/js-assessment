@@ -1,4 +1,6 @@
-window.recursionAnswers = {
+typeof window === 'undefined' ? exports = global : exports = window
+
+exports.recursionAnswers = {
   listFiles: function(data, dirName) {
 
   },

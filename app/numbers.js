@@ -1,4 +1,6 @@
-window.numbersAnswes = {
+typeof window === 'undefined' ? exports = global : exports = window
+
+exports.numbersAnswers = {
   valueAtBit: function(num, bit) {
 
   },

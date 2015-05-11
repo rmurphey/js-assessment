@@ -1,4 +1,6 @@
-window.regexAnswrs = {
+typeof window === 'undefined' ? exports = global : exports = window
+
+exports.regexAnswers = {
   containsNumber : function(str) {
 
   },

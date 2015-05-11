@@ -1,4 +1,6 @@
-window.asyncAnswers = {
+typeof window === 'undefined' ? exports = global : exports = window
+
+exports.asyncAnswers = {
   async : function(value) {
 
   },

@@ -1,4 +1,6 @@
-window.logicalOperatorsAnswers = {
+typeof window === 'undefined' ? exports = global : exports = window
+
+exports.logicalOperatorsAnswers = {
   or : function(a, b) {
 
   },
