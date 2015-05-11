@@ -4,7 +4,7 @@ const finalHandler = require('finalhandler')
 const serveStatic = require('serve-static');
 
 const port = process.env.PORT || '4444';
-const host = process.env.HOST || '0.0.0.0';
+const host = process.env.HOST || '127.0.0.1';
 
 var serve = serveStatic(__dirname, {'index': ['tests/runner.html']})
 
