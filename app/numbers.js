@@ -1,22 +1,17 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+window.numbersAnswes = {
+  valueAtBit: function(num, bit) {
 
-define(function() {
-  return {
-    valueAtBit: function(num, bit) {
+  },
 
-    },
+  base10: function(str) {
 
-    base10: function(str) {
+  },
 
-    },
+  convertToBinary: function(num) {
 
-    convertToBinary: function(num) {
+  },
 
-    },
+  multiply: function(a, b) {
 
-    multiply: function(a, b) {
-
-    }
-  };
-});
-
+  }
+};

@@ -1,21 +1,17 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+window.recursionAnswers = {
+  listFiles: function(data, dirName) {
 
-define(function() {
-  return {
-    listFiles: function(data, dirName) {
+  },
 
-    },
+  permute: function(arr) {
 
-    permute: function(arr) {
+  },
 
-    },
+  fibonacci: function(n) {
 
-    fibonacci: function(n) {
+  },
 
-    },
+  validParentheses: function(n) {
 
-    validParentheses: function(n) {
-
-    }
-  };
-});
+  }
+};

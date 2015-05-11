@@ -1,17 +1,13 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+window.objectsAnswers =  {
+  alterContext : function(fn, obj) {
 
-define(function() {
-  return {
-    alterContext : function(fn, obj) {
+  },
 
-    },
+  alterObjects : function(constructor, greeting) {
 
-    alterObjects : function(constructor, greeting) {
+  },
 
-    },
+  iterate : function(obj) {
 
-    iterate : function(obj) {
-
-    }
-  };
-});
+  }
+};

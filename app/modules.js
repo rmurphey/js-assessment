@@ -1,10 +1,5 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+window.modulesAnswers = {
+  createModule : function(str1, str2) {
 
-define(function() {
-  return {
-    createModule : function(str1, str2) {
-
-    }
-  };
-});
-
+  }
+};

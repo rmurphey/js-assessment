@@ -1,13 +1,9 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+window.asyncAnswers = {
+  async : function(value) {
 
-define([ 'jquery' ], function($) {
-  return {
-    async : function(value) {
+  },
 
-    },
+  manipulateRemoteData : function(url) {
 
-    manipulateRemoteData : function(url) {
-
-    }
-  };
-});
+  }
+};

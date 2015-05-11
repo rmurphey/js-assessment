@@ -1,13 +1,9 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+window.logicalOperatorsAnswers = {
+  or : function(a, b) {
 
-define(function() {
-  return {
-    or : function(a, b) {
+  },
 
-    },
+  and : function(a, b) {
 
-    and : function(a, b) {
-
-    }
-  };
-});
+  }
+};
