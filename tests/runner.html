@@ -10,16 +10,48 @@
 <body>
   <div id="mocha"></div>
   <div id="test"></div>
-
+  
+  <!-- load deps -->
   <script src="/node_modules/jquery/dist/jquery.js"></script>
+  <script src="/node_modules/underscore/underscore.js"></script>
   <script src="/node_modules/chai/chai.js"></script>
   <script src="/node_modules/mocha/mocha.js"></script>
+  
+  <!-- run tests -->
   <script>
     window.expect = chai.expect;
     mocha.setup('bdd');
+    window.onload = function() {
+      mocha.run()
+    };
   </script>
 
-  <script src="/node_modules/requirejs/require.js" data-main="app/config"></script>
+  <!-- load tests and answers -->
+  <script src="/tests/app/arrays.js"></script>
+  <script src="/app/arrays.js"></script>
+  <script src="/tests/app/async.js"></script>
+  <script src="/app/async.js"></script>
+  <script src="/tests/app/bestPractices.js"></script>
+  <script src="/app/bestPractices.js"></script>
+  <script src="/tests/app/count.js"></script>
+  <script src="/app/count.js"></script>
+  <script src="/tests/app/flowControl.js"></script>
+  <script src="/app/flowControl.js"></script>
+  <script src="/tests/app/functions.js"></script>
+  <script src="/app/functions.js"></script>
+  <script src="/tests/app/logicalOperators.js"></script>
+  <script src="/app/logicalOperators.js"></script>
+  <script src="/tests/app/modules.js"></script>
+  <script src="/app/modules.js"></script>
+  <script src="/tests/app/numbers.js"></script>
+  <script src="/app/numbers.js"></script>
+  <script src="/tests/app/objects.js"></script>
+  <script src="/app/objects.js"></script>
+  <script src="/tests/app/recursion.js"></script>
+  <script src="/app/recursion.js"></script>
+  <script src="/tests/app/regex.js"></script>
+  <script src="/app/regex.js"></script>
+ 
   <!-- livereload snippet -->
   <script src="http://localhost:35729/livereload.js"></script>
 </body>
