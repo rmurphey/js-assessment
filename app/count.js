@@ -1,7 +1,7 @@
-typeof window === 'undefined' ? exports = global : exports = window
+exports = (typeof window === 'undefined') ? global : window;
 
 exports.countAnswers =  {
   count : function (start, end) {
-  
+
   }
 };

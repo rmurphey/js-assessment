@@ -1,9 +1,9 @@
-typeof window === 'undefined' ? exports = global : exports = window
+exports = (typeof window === 'undefined') ? global : window;
 
 exports.arraysAnswers = {
 
   indexOf : function(arr, item) {
-  
+
   },
 
   sum : function(arr) {

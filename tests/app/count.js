@@ -9,7 +9,6 @@ if ( typeof window === 'undefined' ) {
   * number to the end number, one number per 1/10th of a second. The function should
   * return an object with a cancel method, which should cancel the counting.
 */
-'use strict';
 
 describe('counter', function () {
   var nums;

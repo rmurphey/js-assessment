@@ -1,4 +1,4 @@
-typeof window === 'undefined' ? exports = global : exports = window
+exports = (typeof window === 'undefined') ? global : window;
 
 /**
  * This file defines an object with some methods. Some of these methods are
