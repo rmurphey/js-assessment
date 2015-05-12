@@ -65,7 +65,7 @@ the `data` directory; you can access it at `/data/<filename>.json`.
 
 ### Available dependencies
 
-The repo includes jQuery, Backbone, Underscore, and RequireJS. If there's other
+The repo includes jQuery, Backbone, and Underscore. If there's other
 stuff you'd find useful, you can put it in the `lib` directory.
 
 ## I want to see the answers!
@@ -80,10 +80,9 @@ keep them up to date.
 
 ## I hate \<some technology you've chosen\>
 
-This repo uses [RequireJS](http://requirejs.org) for dependency management and
-[Mocha](http://visionmedia.github.com/mocha/) and [Chai](http://chaijs.com/)
-for the tests themselves. It uses the BDD style for authoring tests. If this
-doesn't suit you, please fork away, or, better, submit a pull request that lets
+This repo uses [Mocha](http://visionmedia.github.com/mocha/) and
+[Chai](http://chaijs.com/) for the tests themselves. It uses the BDD style for authoring tests.
+If this doesn't suit you, please fork away, or, better, submit a pull request that lets
 this be more flexible than it currently is.
 
 # Todos
