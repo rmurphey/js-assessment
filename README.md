@@ -65,8 +65,8 @@ the `data` directory; you can access it at `/data/<filename>.json`.
 
 ### Available dependencies
 
-The repo includes jQuery, Backbone, and Underscore. If there's other
-stuff you'd find useful, you can put it in the `lib` directory.
+The repo includes jQuery, Backbone, and Underscore. Do take advantage of these
+libraries when writing your solutions!
 
 ## I want to see the answers!
 
