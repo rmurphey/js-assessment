@@ -12,24 +12,23 @@
     "node": "0.12.x"
   },
   "dependencies": {
-    "amdefine": "0.0.2",
+    "backbone": "^1.1.2",
+    "chai": "^2.3.0",
     "expect.js": "0.1.2",
     "finalhandler": "^0.3.5",
     "grunt": "0.4.0",
     "grunt-contrib-connect": "^0.10.1",
     "grunt-contrib-jshint": "~0.1.0",
+    "grunt-contrib-watch": "~0.4.4",
+    "jquery": "^1.11.0",
+    "load-grunt-tasks": "^3.1.0",
     "mocha": "^2.2.4",
     "serve-static": "^1.9.2",
     "underscore": "1.8.x"
   },
-  "devDependencies": {
-    "requirejs": "2.1.x",
-    "grunt-contrib-connect": "^0.10.1",
-    "grunt-contrib-watch": "~0.4.4"
-  },
   "scripts": {
     "start": "node index.js",
-    "test": "./node_modules/mocha/bin/mocha -R spec tests/runner.js"
+    "test": "mocha -R spec 'tests/app'"
   },
   "bugs": {
     "url": "https://github.com/rmurphey/js-assessment/issues"
