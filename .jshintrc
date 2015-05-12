@@ -21,5 +21,24 @@
   "undef": true,
   "sub": true,
   "strict": false,
-  "quotmark": "single"
+  "quotmark": "single",
+
+  "predef": [
+    "describe",
+    "beforeEach",
+    "afterEach",
+    "it",
+    "arraysAnswers",
+    "asyncAnswers",
+    "bestPracticesAnswers",
+    "countAnswers",
+    "flowControlAnswers",
+    "functionsAnswers",
+    "logicalOperatorsAnswers",
+    "modulesAnswers",
+    "numbersAnswers",
+    "objectsAnswers",
+    "recursionAnswers",
+    "regexAnswers"
+  ]
 }

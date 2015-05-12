@@ -1,28 +1,26 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+exports = (typeof window === 'undefined') ? global : window;
 
-define(function() {
-  return {
-    containsNumber : function(str) {
+exports.regexAnswers = {
+  containsNumber : function(str) {
 
-    },
+  },
 
-    containsRepeatingLetter : function(str) {
+  containsRepeatingLetter : function(str) {
 
-    },
+  },
 
-    endsWithVowel : function(str) {
+  endsWithVowel : function(str) {
 
-    },
+  },
 
-    captureThreeNumbers : function(str) {
+  captureThreeNumbers : function(str) {
 
-    },
+  },
 
-    matchesPattern : function(str) {
+  matchesPattern : function(str) {
 
-    },
-    isUSD : function(str) {
+  },
+  isUSD : function(str) {
 
-    }
-  };
-});
+  }
+};
