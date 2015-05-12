@@ -66,7 +66,7 @@ describe('functions', function() {
     expect(functionsAnswers.useArguments(a)).to.eql(a);
     expect(functionsAnswers.useArguments(a, b)).to.eql(a + b);
     expect(functionsAnswers.useArguments(a, b, c)).to.eql(a + b + c);
-    expect(funcationsAnswers.useArguments(a, b, c, d)).to.eql(a + b + c + d);
+    expect(functionsAnswers.useArguments(a, b, c, d)).to.eql(a + b + c + d);
   });
 
   it('you should be able to apply functions with arbitrary numbers of arguments', function () {
@@ -138,7 +138,7 @@ describe('functions', function() {
     expect(typeof result).to.eql('function');
     expect(result.length).to.eql(1);
 
-    result = functionAnswers.curryIt(curryMe)(a)(b)(c);
+    result = functionsAnswers.curryIt(curryMe)(a)(b)(c);
     expect(typeof result).to.eql('number');
     expect(result).to.eql(curryMe(a, b, c));
   });

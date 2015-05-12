@@ -1,7 +1,7 @@
 if ( typeof window === 'undefined' ) {
   require('../../app/recursion');
   var expect = require('chai').expect;
-  var _ = require('underscore')
+  var _ = require('underscore');
 }
 
 describe('recursion', function() {

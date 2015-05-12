@@ -1,8 +1,7 @@
-if ( typeof window === 'undefined' ) { 
+if ( typeof window === 'undefined' ) {
   require('../../app/arrays');
   var expect = require('chai').expect;
 }
-
 
 describe('arrays', function() {
   var a;
