@@ -13,7 +13,7 @@ describe('logical operators', function(){
   });
 
   it('you should be able to work with logical and', function() {
-    expect(logicalOperatorsAnswers.or(false, true)).not.to.be.ok;
+    expect(logicalOperatorsAnswers.and(false, true)).not.to.be.ok;
     expect(logicalOperatorsAnswers.and(false, false)).not.to.be.ok;
     expect(logicalOperatorsAnswers.and(true, false)).not.to.be.ok;
     expect(logicalOperatorsAnswers.and(true, true)).to.be.ok;
