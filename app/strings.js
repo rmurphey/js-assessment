@@ -1,15 +1,13 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+exports = (typeof window === 'undefined') ? global : window;
 
-define(function() {
-  return {
-    reduceString: function(str, amount) {
+exports.stringsAnswers = {
+  reduceString: function(str, amount) {
 
-    },
-    wordWrap: function(str, cols) {
+  },
+  wordWrap: function(str, cols) {
 
-    },
-    reverseString: function(str) {
+  },
+  reverseString: function(str) {
 
-    }
-  };
-});
+  }
+};
