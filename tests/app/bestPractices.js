@@ -15,9 +15,9 @@ describe('best practices', function(){
   });
 
   it('you should use parseInt correctly', function() {
-    expect(bestPracticesAnswers.parseInt('12')).to.eql(12);
-    expect(bestPracticesAnswers.parseInt('12px')).to.eql(12);
-    expect(bestPracticesAnswers.parseInt('0x12')).to.eql(0);
+    expect(bestPracticesAnswers.parseIntGood('12')).to.eql(12);
+    expect(bestPracticesAnswers.parseIntGood('12px')).to.eql(12);
+    expect(bestPracticesAnswers.parseIntGood('0x12')).to.eql(0);
   });
 
   it('you should understand strict comparison', function() {
