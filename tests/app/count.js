@@ -41,12 +41,11 @@ describe('counter', function () {
     this.timeout(600);
     countAnswers.count(1, 5);
 
-    this.clock.tick(200);
+    for (var i = 1, t = 100; i <= 5; i++) {
+      expect(nums.length).to.eql(i);
 
-    expect(nums.length > 1).to.be.ok;
-    expect(nums.length < 5).to.be.ok;
-
-    this.clock.tick(350);
+      this.clock.tick( t );
+    }
 
     expect(nums.length).to.eql(5);
     expect(nums[0]).to.eql(1);
