@@ -41,10 +41,10 @@ describe('counter', function () {
     this.timeout(600);
     countAnswers.count(1, 5);
 
-    for (var i = 1, t = 100; i <= 5; i++) {
+    for (var i = 1; i <= 5; i++) {
       expect(nums.length).to.eql(i);
 
-      this.clock.tick( t );
+      this.clock.tick(100);
     }
 
     expect(nums.length).to.eql(5);
