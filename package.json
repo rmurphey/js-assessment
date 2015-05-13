@@ -12,6 +12,7 @@
     "node": "0.12.x"
   },
   "dependencies": {
+    "babel": "^5.3.1",
     "backbone": "^1.1.2",
     "chai": "^2.3.0",
     "expect.js": "0.1.2",
@@ -28,7 +29,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "mocha -R spec 'tests/app'"
+    "test": "mocha --compilers js:babel/register -R spec 'tests/app'"
   },
   "bugs": {
     "url": "https://github.com/rmurphey/js-assessment/issues"

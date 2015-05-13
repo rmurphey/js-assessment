@@ -25,7 +25,7 @@ exports.bestPracticesAnswers = {
     return getValue();
   },
 
-  parseInt : function(num) {
+  parseIntGood : function(num) {
     return parseInt(num);
   },
 
