@@ -37,7 +37,7 @@ describe('counter', function () {
     this.clock.restore();
   });
 
-  it('should count from start number to end number, one per 1/10th of a second', function (done) {
+  it('should count from start number to end number, one per 1/10th of a second', function () {
     this.timeout(600);
     countAnswers.count(1, 5);
 
@@ -50,11 +50,9 @@ describe('counter', function () {
     expect(nums.length).to.eql(5);
     expect(nums[0]).to.eql(1);
     expect(nums[4]).to.eql(5);
-
-    done();
   });
 
-  it('should provide a method to cancel the counting', function (done) {
+  it('should provide a method to cancel the counting', function () {
     this.timeout(600);
 
     var counter = countAnswers.count(1, 5);
@@ -63,6 +61,5 @@ describe('counter', function () {
     this.clock.tick(550);
 
     expect(nums.length < 5).to.be.ok;
-    done();
   });
 });
