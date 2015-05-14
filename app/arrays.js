@@ -3,15 +3,31 @@ exports = (typeof window === 'undefined') ? global : window;
 exports.arraysAnswers = {
 
   indexOf : function(arr, item) {
-
+    var result = -1;
+    for(var i = 0; i < arr.length; i++){
+      if(arr[i] === item){
+        result = i;
+      }
+    }
+    return result;
   },
 
   sum : function(arr) {
-
+    var result = 0; 
+    arr.forEach(function(number){
+      result += number;
+    });
+    return result;
   },
 
   remove : function(arr, item) {
-
+    var removed = [];
+    for(var i = 0; i < arr.length; i++){
+      if(arr[i] !== item){
+        removed.push(arr[i]);
+      }
+    }
+    return removed;
   },
 
   removeWithoutCopy : function(arr, item) {
