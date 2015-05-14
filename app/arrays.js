@@ -46,14 +46,18 @@ exports.arraysAnswers = {
   },
 
   truncate : function(arr) {
-
+    arr.pop();
+    return arr;
   },
 
   prepend : function(arr, item) {
-
+    arr.unshift(item);
+    return arr;
   },
 
   curtail : function(arr) {
+    arr.shift();
+    return arr;
 
   },
 
