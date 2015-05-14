@@ -62,15 +62,29 @@ exports.arraysAnswers = {
   },
 
   concat : function(arr1, arr2) {
-
+    var results = [];
+    for(var i = 0; i < arr1.length; i++){
+      results.push(arr1[i]);
+    }
+    for(var b = 0; b < arr2.length; b++){
+      results.push(arr2[b]);
+    }
+    return results;
   },
 
   insert : function(arr, item, index) {
-
+    arr.splice(index, 0, item);
+    return arr;
   },
 
   count : function(arr, item) {
-
+    var count = 0;
+    arr.forEach(function(number){
+      if (number === item){
+        count += 1;
+      }
+    });
+    return count;
   },
 
   duplicates : function(arr) {
@@ -78,10 +92,20 @@ exports.arraysAnswers = {
   },
 
   square : function(arr) {
-
+    var sq = [];
+    arr.forEach(function(number){
+      sq.push(number * number);
+    });
+    return sq;
   },
 
   findAllOccurrences : function(arr, target) {
-
+    var place = [];
+    for(var i = 0; i < arr.length; i++){
+      if(target === arr[i]){
+        place.push(i);
+      }
+    }
+    return place; 
   }
 };
