@@ -88,7 +88,16 @@ exports.arraysAnswers = {
   },
 
   duplicates : function(arr) {
-
+    var reoccur = [];
+    var occurrances =[];
+    for(var i = 0; i <= arr.length; i++){
+      if(arr[i] in occurrances){
+        reoccur.push(arr[i]);
+      } else {
+        occurrances.push(arr[i]);
+      }
+    }
+    return reoccur;
   },
 
   square : function(arr) {

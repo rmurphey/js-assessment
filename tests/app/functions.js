@@ -29,7 +29,7 @@ describe('functions', function() {
           name : 'Rebecca'
         };
 
-    var result = functionsAnswers.speak(speak, obj);
+    var result = functiothisnsAnswers.speak(speak, obj);
     expect(result).to.eql('Hello, Rebecca!!!');
     expect(sayItCalled).to.be.ok;
   });
