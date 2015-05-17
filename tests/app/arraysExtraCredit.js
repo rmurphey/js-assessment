@@ -6,7 +6,7 @@ if ( typeof window === 'undefined' ) {
 xdescribe('arraysExtraCredit', function() {
   var a;
 
-  /*create an array-like object (sublcass of array) that is missing the methods that
+  /*create an array-like object (subclass of Array) that is missing the methods that
   the user needs to implement */
   var ArrayLike = function() {
     Array.call(this);
