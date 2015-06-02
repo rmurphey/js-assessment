@@ -1,6 +1,7 @@
 if ( typeof window === 'undefined' ) {
   require('../../app/count');
   var expect = require('chai').expect;
+  var sinon = require('sinon');
 }
 
 /**
@@ -26,38 +27,39 @@ describe('counter', function () {
     console.log = function (val) {
       nums.push(val);
     };
+
+    this.clock = sinon.useFakeTimers();
   });
 
   afterEach(function () {
     console.log = origConsoleLog;
+
+    this.clock.restore();
   });
 
-  it('should count from start number to end number, one per 1/10th of a second', function (done) {
+  it('should count from start number to end number, one per 1/10th of a second', function () {
     this.timeout(600);
     countAnswers.count(1, 5);
 
-    setTimeout(function () {
-      expect(nums.length > 1).to.be.ok;
-      expect(nums.length < 5).to.be.ok;
-    }, 200);
+    for (var i = 1; i <= 5; i++) {
+      expect(nums.length).to.eql(i);
 
-    setTimeout(function () {
-      expect(nums.length).to.eql(5);
-      expect(nums[0]).to.eql(1);
-      expect(nums[4]).to.eql(5);
-      done();
-    }, 550);
+      this.clock.tick(100);
+    }
+
+    expect(nums.length).to.eql(5);
+    expect(nums[0]).to.eql(1);
+    expect(nums[4]).to.eql(5);
   });
 
-  it('should provide a method to cancel the counting', function (done) {
+  it('should provide a method to cancel the counting', function () {
     this.timeout(600);
 
     var counter = countAnswers.count(1, 5);
     counter.cancel();
 
-    setTimeout(function () {
-      expect(nums.length < 5).to.be.ok;
-      done();
-    }, 550);
+    this.clock.tick(550);
+
+    expect(nums.length < 5).to.be.ok;
   });
 });
