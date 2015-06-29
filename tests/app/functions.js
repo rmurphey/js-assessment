@@ -37,4 +37,21 @@ describe('functions', function() {
     expect(result).to.eql('Launch Academy!');
   });
 
+  it('should return true or false based on a number being prime', function() {
+    var _true = functionAnswers.isPrime(5);
+    var _false = functionAnswers.isPrime(100);
+    expect(_true).to.eql(true);
+    expect(_false).to.eql(false);
+  });
+
+  it('should return the sum of all elements of an array of numbers', function() {
+    var array1 = [1, 2, 3, 4, 5];
+    var array2 = [-5, 0, 5];
+    var result1 = functionAnswers.arraySum(array1);
+    var result2 = functionAnswers.arraySum(array2);
+
+    expect(result1).to.eql(15);
+    expect(result2).to.eql(0);
+  });
+
 });

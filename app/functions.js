@@ -13,7 +13,15 @@ exports.functionsAnswers = {
 
   },
 
-  capitalizeWords : function(arr, fn) {
+  capitalizeWords : function(str) {
+
+  },
+
+  isPrime : function(num) {
+
+  },
+
+  arraySum : function(array) {
 
   }
 };
