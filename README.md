@@ -18,11 +18,15 @@ npm install
 npm start
 ```
 
-Then, point your browser to [http://localhost:4444](http://localhost:4444).
+Then, point your browser to [http://localhost:4444](http://localhost:4444):
+
+[alt](http://i.imgur.com/itfZyCz.png)
 
 You should see that all the tests are failing. Oh no! Whatever shall we do.
 
-Your job is to update the `.js` files in the `app` folder to get the tests to pass. You can find the tests in the `tests/app` folder. Reload the page to see whether your code updates worked.
+Your job is to update the `.js` files in the `app` folder to get the tests to pass. You can find the tests in the `tests/app` folder. Reload the page to see whether your code updates worked:
+
+[alt](http://i.imgur.com/Gkh9E7t.png)
 
 ### Available dependencies
 
