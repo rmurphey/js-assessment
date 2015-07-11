@@ -104,7 +104,7 @@ describe('arrays', function() {
   });
 
   it('you should be able to find all occurrences of an item in an array', function() {
-    var result = arraysAnswers.findAllOccurrences('abcdefabc'.split(''), 'a');
+    var result = arraysAnswers.findAllOccurrences([ 1, 2, 3, 4, 5, 6, 1, 7], 1);
 
     expect(result.sort().join(' ')).to.eql('0 6');
   });
