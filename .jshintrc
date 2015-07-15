@@ -29,16 +29,12 @@
     "afterEach",
     "it",
     "arraysAnswers",
-    "asyncAnswers",
     "bestPracticesAnswers",
-    "countAnswers",
     "flowControlAnswers",
     "functionsAnswers",
-    "logicalOperatorsAnswers",
-    "modulesAnswers",
-    "numbersAnswers",
     "objectsAnswers",
     "recursionAnswers",
-    "regexAnswers"
+    "regexAnswers",
+    "eveningExerciseAnswers"
   ]
 }

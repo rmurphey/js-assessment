@@ -15,7 +15,6 @@ describe('evening exercise', function() {
     string = "launch academy!";
   });
 
-
   it('you should be able to determine the location of an item in an array', function() {
     expect(eveningExerciseAnswers.indexOf(a, 3)).to.eql(2);
     expect(eveningExerciseAnswers.indexOf(a, 5)).to.eql(-1);
