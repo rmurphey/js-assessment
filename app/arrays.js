@@ -2,18 +2,6 @@ exports = (typeof window === 'undefined') ? global : window;
 
 exports.arraysAnswers = {
 
-  indexOf : function(arr, item) {
-
-  },
-
-  sum : function(arr) {
-
-  },
-
-  remove : function(arr, item) {
-
-  },
-
   removeWithoutCopy : function(arr, item) {
 
   },

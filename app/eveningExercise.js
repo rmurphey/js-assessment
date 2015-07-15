@@ -7,29 +7,31 @@ exports = (typeof window === 'undefined') ? global : window;
  */
 
 exports.eveningExerciseAnswers = {
-  globals : function() {
-    myObject = {
-      name : 'Jory'
-    };
+  indexOf : function(arr, item) {
 
-    return myObject;
   },
 
-  functions : function(flag) {
-    if (flag) {
-      function getValue() { return 'a'; }
-    } else {
-      function getValue() { return 'b'; }
-    }
+  sum : function(arr) {
 
-    return getValue();
   },
 
-  parseInt : function(num) {
-    return parseInt(num);
+  remove : function(arr, item) {
+
   },
 
-  identity : function(val1, val2) {
+  reverseString : function(str) {
+
+  },
+
+  longestSubString : function(str) {
+
+  },
+
+  letterMoveForward : function(str) {
+
+  },
+
+  capitalizeWords : function(str) {
 
   }
 };
