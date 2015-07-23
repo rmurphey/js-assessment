@@ -47,7 +47,7 @@ describe('evening exercise', function() {
   it('should replace a string of letters with letters that follow them in the alphabet', function() {
     var string1 = "abcdef";
     var string2 = "z3bac";
-    var result1 = eveningExerciseAnswers.letterMoveForward(string);
+    var result1 = eveningExerciseAnswers.letterMoveForward(string1);
     var result2 = eveningExerciseAnswers.letterMoveForward(string2);
 
     expect(result1).to.eql('bcdefg');

@@ -11,7 +11,7 @@ describe('strings', function() {
     expect(stringsAnswers.reduceString('aaxxxaabbbb', 2)).to.eql('aaxxaabb');
   });
 
-  it('you should be able to wrap lines at a given number of columns, without breaking words', function() {
+  it('implement word wrap without breaking words given a number of columns', function() {
     var wrapCol = 5;
     var inputStrings = [
       'abcdef abcde abc def',
