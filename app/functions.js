@@ -1,39 +1,22 @@
 exports = (typeof window === 'undefined') ? global : window;
 
 exports.functionsAnswers = {
-  argsAsArray : function(fn, arr) {
+  isPrime : function(num) {
 
   },
 
-  speak : function(fn, obj) {
+  arraySum : function(array) {
 
   },
 
-  functionFunction : function(str) {
-
-  },
-
-  makeClosures : function(arr, fn) {
-
-  },
-
-  partial : function(fn, str1, str2) {
-
-  },
-
-  useArguments : function() {
-
-  },
-
-  callIt : function(fn) {
-
-  },
-
-  partialUsingArguments : function(fn) {
-
-  },
-
-  curryIt : function(fn) {
-
+  fizzBuzz : function(num) {
+    // write a function that receives a number as its argument;
+    // if the number is divisible by 3, the function should return 'fizz';
+    // if the number is divisible by 5, the function should return 'buzz';
+    // if the number is divisible by 3 and 5, the function should return
+    // 'fizzbuzz';
+    //
+    // otherwise the function should return the number, or false if no number
+    // was provided or the value provided is not a number
   }
 };
