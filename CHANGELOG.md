@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.3.1
+
+- Updated grunt-contrib-jshint to latest version to get latest version of jshint(supports mocha environment and multiple .jshintrc and config extension)
+- Updated jshint configs to prevent errors for unit test source files and be more strict about when unit test syntax and globals are allowed
+- Updated unit test files to set required answers as a local variable to remove dependency on using "predef" property in .jshintrc and manually mantaining list
+
 ## 0.3.0
 
 - Remove jquery, backbone, underscore, mocha, and chai as local libraries

@@ -1,5 +1,5 @@
 if ( typeof window === 'undefined' ) {
-  require('../../app/flowControl');
+  var flowControlAnswers = require('../../app/flowControl');
   var expect = require('chai').expect;
 }
 

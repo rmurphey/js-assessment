@@ -1,5 +1,5 @@
 if ( typeof window === 'undefined' ) {
-  require('../../app/arrays');
+  var arraysAnswers = require('../../app/arrays');
   var expect = require('chai').expect;
 }
 

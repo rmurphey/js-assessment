@@ -1,5 +1,5 @@
 if ( typeof window === 'undefined' ) {
-  require('../../app/count');
+  var countAnswers = require('../../app/count');
   var expect = require('chai').expect;
   var sinon = require('sinon');
 }

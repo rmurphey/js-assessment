@@ -1,5 +1,5 @@
 if ( typeof window === 'undefined' ) {
-  require('../../app/logicalOperators');
+  var logicalOperatorsAnswers = require('../../app/logicalOperators');
   var expect = require('chai').expect;
 }
 

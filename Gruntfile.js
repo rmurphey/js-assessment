@@ -11,7 +11,7 @@ module.exports = function(grunt) {
         '!app/bestPractices.js'
       ],
       options: {
-        jshintrc: '.jshintrc'
+        jshintrc: true
       }
     },
     watch: {
