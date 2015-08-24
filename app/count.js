@@ -13,7 +13,7 @@ exports.countAnswers =  {
       }
     };
 
-    if(i <= end) {
+    if(start <= end) {
       iteration(start);
     }
 
