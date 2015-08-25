@@ -21,8 +21,6 @@ exports.regexAnswers = {
     return !!str.match(/^\d{3}-\d{3}-\d{4}$/);
   },
   isUSD : function(str) {
-    var ret = !!str.match(/^\$([0-9]{1,3},([0-9]{3},)*[0-9]{3}|[0-9]+)(\.[0-9][0-9])?$/);
-    console.log(str, ret);
-    return ret;
+    return !!str.match(/^\$([0-9]{1,3},([0-9]{3},)*[0-9]{3}|[0-9]+)(\.[0-9][0-9])?$/);
   }
 };
