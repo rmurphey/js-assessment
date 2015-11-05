@@ -20,6 +20,7 @@ exports.regexAnswers = {
   matchesPattern: function(str) {
 
   },
+
   isUSD: function(str) {
 
   }
