@@ -14,19 +14,18 @@ exports.arraysAnswers = {
   sum : function(arr) {
    arr.reduce(function(a,b) {
     sum = a + b;
-    // console.log(sum)
     return sum;
    });
+   return sum;
   },
 
   remove : function(arr, item) {
     for (var i = 0; i < arr.length; i++) {
       if (item === arr[i]) {
-        arr.splice(i,1);
+          arr.splice(i,1);
       }
     }
-    var length = arr.length;
-    // console.log(arr);
+    return arr;
   },
 
   removeWithoutCopy : function(arr, item) {
@@ -68,7 +67,7 @@ exports.arraysAnswers = {
   square : function(arr) {
     _.each(arr, function(x) { 
       Math.pow(x,2);     
-      console.log(x);
+      // console.log(x);
        });
     
   },
