@@ -58,18 +58,29 @@ exports.arraysAnswers = {
   },
 
   concat : function(arr1, arr2) {
+    var a = arr1.concat(arr2);
+    return a;
   },
 
   insert : function(arr, item, index) {
-
+    arr.splice(index ,0, item);
+    return arr;
   },
 
   count : function(arr, item) {
-
+    var count = 0;
+    for (var i = 0; i < arr.length; i++) {
+      if (item === arr[i]) {
+        count++;
+      }
+    }
+    return count;
   },
 
   duplicates : function(arr) {
+    var result = [];
 
+    return result;
   },
 
   square : function(arr) {
