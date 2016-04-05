@@ -11,6 +11,10 @@ exports.objectsAnswers =  {
   },
 
   iterate : function(obj) {
-
+    let objectProperties = [];
+    for(var key in obj) {
+      if(obj.hasOwnProperty(key)){ objectProperties.push(key + ": " + obj[key]); }
+    }
+    return objectProperties;
   }
 };
