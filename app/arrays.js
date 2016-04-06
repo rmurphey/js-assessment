@@ -15,7 +15,8 @@ exports.arraysAnswers = {
   },
 
   remove : function(arr, item) {
-    let index = this.indexOf(arr, item);
+    // TODO backwards for loop may be faster
+    var index = this.indexOf(arr, item);
     while(index > -1) {
       arr.splice(index, 1);
       index = this.indexOf(arr, item);
@@ -24,46 +25,70 @@ exports.arraysAnswers = {
   },
 
   removeWithoutCopy : function(arr, item) {
-
+    // TODO backwards for loop may be faster
+    var index = this.indexOf(arr, item);
+    while(index > -1) {
+      arr.splice(index, 1);
+      index = this.indexOf(arr, item);
+    }
+    return arr;
   },
 
   append : function(arr, item) {
-
+    arr.push(item);
+    return arr;
   },
 
   truncate : function(arr) {
-
+    arr.splice(arr.length-1, 1);
+    return arr;
   },
 
   prepend : function(arr, item) {
-
+    arr.unshift(item);
+    return arr;
   },
 
   curtail : function(arr) {
-
+    arr.shift();
+    return arr;
   },
 
   concat : function(arr1, arr2) {
-
+    return arr1.concat(arr2);
   },
 
   insert : function(arr, item, index) {
-
+    arr.splice(index, 0, item);
+    return arr;
   },
 
   count : function(arr, item) {
-
+    var counter = 0;
+    for(var i=0; i<arr.length; i++) {
+      if(arr[i] == item) {counter++;}
+    }
+    return counter;
   },
 
   duplicates : function(arr) {
-
+    var dups = arr.filter(function(itm, i){
+        return arr.lastIndexOf(itm)== i && arr.indexOf(itm)!= i;
+    });
+    return dups;
   },
 
   square : function(arr) {
-
+    return arr.map(function(x) {
+      return Math.pow(x, 2);
+    });
   },
 
   findAllOccurrences : function(arr, target) {
-
+    var locations = [];
+    for(var i=0; i<arr.length; i++) {
+      if(arr[i] == target) {locations.push(i);}
+    }
+    return locations;
   }
 };
