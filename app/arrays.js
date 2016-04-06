@@ -10,7 +10,8 @@ exports.arraysAnswers = {
   },
 
   sum : function(arr) {
-
+    var sum = arr.reduce((a, b) => a + b, 0);
+    return sum;
   },
 
   remove : function(arr, item) {
