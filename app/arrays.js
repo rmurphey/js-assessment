@@ -15,21 +15,16 @@ exports.arraysAnswers = {
   },
 
   remove : function(arr, item) {
-    // TODO backwards for loop may be faster
-    var index = this.indexOf(arr, item);
-    while(index > -1) {
-      arr.splice(index, 1);
-      index = this.indexOf(arr, item);
+    var cleanAry = [];
+    for(var i=0; i<arr.length; i++){
+      if(arr[i]!=item){cleanAry.push(arr[i])}
     }
-    return arr;
+    return cleanAry;
   },
 
   removeWithoutCopy : function(arr, item) {
-    // TODO backwards for loop may be faster
-    var index = this.indexOf(arr, item);
-    while(index > -1) {
-      arr.splice(index, 1);
-      index = this.indexOf(arr, item);
+    for(var i=arr.length-1; i>0; i--){
+      if(arr[i]==item){arr.splice(i, 1)}
     }
     return arr;
   },
