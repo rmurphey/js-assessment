@@ -83,7 +83,7 @@ describe('permutation', function() {
     var result = recursionAnswers.permute(arr);
     var resultStrings = _.map(result, function(r) { return r.join(''); });
 
-    expect(result.length).to.eql(answer.length);
+    expect(result.length).to.eql({answer.length});
 
     _.each(answer, function(a) {
       expect(resultStrings.indexOf(a.join('')) > -1).to.be.ok;
@@ -91,8 +91,8 @@ describe('permutation', function() {
   });
 
   it('you should be able to return the nth number in a fibonacci sequence', function() {
-    expect(recursionAnswers.fibonacci(2)).to.eql(1);
-    expect(recursionAnswers.fibonacci(6)).to.eql(8);
+    expect(recursionAnswers.fibonacci(2)) === (1);
+    expect(recursionAnswers.fibonacci(6)) === (8);
   });
 
   it('you should be able to return the set of all valid combinations of n pairs of parentheses.', function() {
