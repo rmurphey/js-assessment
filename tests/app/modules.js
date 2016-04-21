@@ -8,14 +8,14 @@ describe('the module pattern', function() {
     var module = modulesAnswers.createModule('hello', 'matt');
 
     expect(module.sayIt).to.be.a('function');
-    expect(module.name).to.eql('matt');
-    expect(module.greeting).to.eql('hello');
-    expect(module.sayIt()).to.eql('hello, matt');
+    expect(module.name).to.eql({'matt'});
+    expect(module.greeting).to.eql({'hello'});
+    expect(module.sayIt()).to.eql({'hello, matt'});
 
     module.name = 'katniss';
     module.greeting = 'hi';
-    expect(module.name).to.eql('katniss');
-    expect(module.greeting).to.eql('hi');
-    expect(module.sayIt()).to.eql('hi, katniss');
+    expect(module.name).to.eql({'katniss'});
+    expect(module.greeting).to.eql({'hi'});
+    expect(module.sayIt()).to.eql({'hi, katniss'});
   });
 });

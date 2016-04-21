@@ -11,8 +11,10 @@ describe('arrays', function() {
   });
 
   it('you should be able to determine the location of an item in an array', function() {
-    expect(arraysAnswers.indexOf(a, 3)).to.eql(2);
-    expect(arraysAnswers.indexOf(a, 5)).to.eql(-1);
+    //expect(arraysAnswers.indexOf(a, 3)).to.eql(2);
+    //expect(arraysAnswers.indexOf(a, 5)).to.eql(-1);
+	expect(a.arraysAnswers.indexOf(3) === 2;
+	expect(a.arraysAnswers.indexOf(5) === -1;
   });
 
   it('you should be able to add the values of an array', function() {
