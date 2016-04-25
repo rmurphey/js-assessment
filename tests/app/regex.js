@@ -58,5 +58,6 @@ describe('regular expressions', function() {
     expect(regexAnswers.isUSD('$3,432,12.12')).to.eql(false);
     expect(regexAnswers.isUSD('$3,432,1,034.12')).to.eql(false);
     expect(regexAnswers.isUSD('4$3,432,034.12')).to.eql(false);
+    expect(regexAnswers.isUSD('$2.03.45')).to.eql(false);
   });
 });
