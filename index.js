@@ -21,4 +21,4 @@ browserSync.init({
 
 f= fs.readFileSync(__dirname + '/help.txt', 'utf8');
 console.log(f.replace('{{host}}', host).replace('{{port}}', port));
-console.log('Server running %s:%d...', host, port);
+console.log('Server running http://%s:%d', host, port);
