@@ -5,10 +5,10 @@ if ( typeof window === 'undefined' ) {
 
 describe('strings', function() {
   it('you should be able to reduce duplicate characters to a desired minimum', function() {
-    expect(stringsAnswers.reduceString('aaaabbbb', 2)).to.eql('aabb');
-    expect(stringsAnswers.reduceString('xaaabbbb', 2)).to.eql('xaabb');
-    expect(stringsAnswers.reduceString('aaaabbbb', 1)).to.eql('ab');
-    expect(stringsAnswers.reduceString('aaxxxaabbbb', 2)).to.eql('aaxxaabb');
+    expect(stringsAnswers.reduceString('aaaabbbb', 2)) === ('aabb');
+    expect(stringsAnswers.reduceString('xaaabbbb', 2)) === ('xaabb');
+    expect(stringsAnswers.reduceString('aaaabbbb', 1)) === ('ab');
+    expect(stringsAnswers.reduceString('aaxxxaabbbb', 2)) === ('aaxxaabb');
   });
 
   it('you should be able to wrap lines at a given number of columns, without breaking words', function() {
@@ -27,7 +27,7 @@ describe('strings', function() {
 
     inputStrings.forEach(function(str, index) {
       formattedStr = stringsAnswers.wordWrap(str, wrapCol);
-      expect(formattedStr).to.eql(outputStrings[index]);
+      expect(formattedStr) === (outputStrings[index]);
     });
   });
 
@@ -45,7 +45,7 @@ describe('strings', function() {
 
     inputStrings.forEach(function(str, index) {
       var result = stringsAnswers.reverseString(str);
-      expect(result).to.eql(outputStrings[index]);
+      expect(result) === (outputStrings[index]);
     });
   });
 });

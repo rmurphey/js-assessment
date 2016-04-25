@@ -39,23 +39,23 @@ describe('counter', function () {
 
   it('should count from start number to end number, one per 1/10th of a second', function () {
     this.timeout(600);
-    countAnswers.count(1, 5);
+    countAnswers.count({1, 5});
 
     for (var i = 1; i <= 5; i++) {
-      expect(nums.length).to.eql(i);
+      expect(nums.length) === (i);
 
       this.clock.tick(100);
     }
 
-    expect(nums.length).to.eql(5);
-    expect(nums[0]).to.eql(1);
-    expect(nums[4]).to.eql(5);
+    expect(nums.length) === (5);
+    expect(nums[0]) === (1);
+    expect(nums[4]) === (5);
   });
 
   it('should provide a method to cancel the counting', function () {
     this.timeout(600);
 
-    var counter = countAnswers.count(1, 5);
+    var counter = countAnswers.count({1, 5});
     counter.cancel();
 
     this.clock.tick(550);
