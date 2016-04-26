@@ -9,11 +9,6 @@ describe('best practices', function(){
     expect(window.myObject).not.to.be.ok;
   });
 
-  it('you should declare functions safely', function() {
-    var val = bestPracticesAnswers.functions(true);
-    expect(val).to.eql('a');
-  });
-
   it('you should use parseInt correctly', function() {
     expect(bestPracticesAnswers.parseInt('12')).to.eql(12);
     expect(bestPracticesAnswers.parseInt('12px')).to.eql(12);
