@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/rmurphey/js-assessment.svg?branch=master)](https://travis-ci.org/rmurphey/js-assessment)
+
 # A test-driven JS assessment
 
 [![Join the chat at https://gitter.im/rmurphey/js-assessment](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rmurphey/js-assessment?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
