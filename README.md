@@ -2,17 +2,13 @@
 
 # A test-driven JS assessment
 
-[![Join the chat at https://gitter.im/rmurphey/js-assessment](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rmurphey/js-assessment?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 This repo includes a set of tests that can be used to assess the skills of
-a candidate for a JavaScript position, or to improve one's own skills.
+a candidate for a JavaScript position, or to evaluate and improve one's own
+skills.
 
 ## I want to work on the tests; what do I do?
-To use the tests, you will need to install Node -- you can do this via the
-[download page](https://nodejs.org/download/) or using
-[Homebrew](http://mxcl.github.com/homebrew/) if you are on a Mac.
-
-Note that on Windows, there are some reports that you will need to restart
+To use the tests, you will need to install [Node](https://nodejs.org/). Note
+that on Windows, there are some reports that you will need to restart
 after installing Node - see #12.
 
 You can clone or download this repo. Once you have done so, from the root
@@ -36,10 +32,10 @@ You can also run (most of) the tests on the command line:
 
 The command line runner is a work in progress; contributions welcome :)
 
-## I need help!
+### Available dependencies
 
-There may be friendly folks willing to help you in \#js-assessment or
-\#jshotline on freenode IRC.
+The repo includes jQuery, Backbone, and Underscore. You can use these
+libraries when writing your solutions!
 
 ## I want to contribute tests; what do I do?
 
@@ -51,18 +47,12 @@ solution to the corresponding file in `app/`. Finally, it would be great if you
 could update the [answers](https://github.com/rmurphey/js-assessment-answers)
 as well.
 
-Any substantial contributions will be duly credited in the readme, as well as
-of course in the git commit log.
+If you're not sure how or where to add a test, please open an issue.
 
 ### Data-driven tests
 
 If your tests need data that can be fetched via XHR, stick a `.json` file in
 the `data` directory; you can access it at `/data/<filename>.json`.
-
-### Available dependencies
-
-The repo includes jQuery, Backbone, and Underscore. Do take advantage of these
-libraries when writing your solutions!
 
 ## I want to see the answers!
 

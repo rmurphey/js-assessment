@@ -24,8 +24,8 @@
   "scripts": {
     "start": "node index.js",
     "test": "mocha -R spec 'tests/app'",
-    "lint": "eslint --quiet tests/app",
-    "lint-warn": "eslint tests/app"
+    "lint": "eslint --quiet tests/app app",
+    "lint-warn": "eslint tests/app app"
   },
   "bugs": {
     "url": "https://github.com/rmurphey/js-assessment/issues"
