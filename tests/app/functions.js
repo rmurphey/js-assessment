@@ -6,9 +6,9 @@ if ( typeof window === 'undefined' ) {
 describe('functions', function() {
   var sayItCalled = false;
   var sayIt = function(greeting, name, punctuation) {
-        sayItCalled = true;
-        return greeting + ', ' + name + (punctuation || '!');
-      };
+    sayItCalled = true;
+    return greeting + ', ' + name + (punctuation || '!');
+  };
 
   beforeEach(function () {
     sayItCalled = false;
@@ -22,12 +22,12 @@ describe('functions', function() {
 
   it('you should be able to change the context in which a function is called', function() {
     var speak = function() {
-          return sayIt(this.greeting, this.name, '!!!');
-        };
+      return sayIt(this.greeting, this.name, '!!!');
+    };
     var obj = {
-          greeting : 'Hello',
-          name : 'Rebecca'
-        };
+      greeting: 'Hello',
+      name: 'Rebecca'
+    };
 
     var result = functionsAnswers.speak(speak, obj);
     expect(result).to.eql('Hello, Rebecca!!!');

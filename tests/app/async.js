@@ -9,8 +9,8 @@ describe('async behavior', function() {
     var finished = 0;
     var total = 2;
 
-    function finish(done) {
-      if (++finished === total) { done(); }
+    function finish(_done) {
+      if (++finished === total) { _done(); }
     }
 
     asyncAnswers.async(true).then(function(result) {

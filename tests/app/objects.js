@@ -10,17 +10,17 @@ describe('objects and context', function() {
 
   beforeEach(function() {
     a = {
-      name : 'Matt',
-      greeting : 'Hello',
-      sayIt : function() {
-        return  this.greeting + ', ' +
+      name: 'Matt',
+      greeting: 'Hello',
+      sayIt: function() {
+        return this.greeting + ', ' +
                 this.name + '!';
       }
     };
 
     b = {
-      name : 'Rebecca',
-      greeting : 'Yo'
+      name: 'Rebecca',
+      greeting: 'Yo'
     };
 
     C = function(name) {
@@ -30,7 +30,7 @@ describe('objects and context', function() {
   });
 
   it('you should be able to alter the context in which a method runs', function() {
-      // define a function for fn so that the following will pass
+    // define a function for fn so that the following will pass
     expect(objectsAnswers.alterContext(a.sayIt, b)).to.eql('Yo, Rebecca!');
   });
 
@@ -49,7 +49,7 @@ describe('objects and context', function() {
 
   it('you should be able to iterate over an object\'s "own" properties', function() {
     // define a function for fn so that the following will pass
-    var C = function() {
+    C = function() {
       this.foo = 'bar';
       this.baz = 'bim';
     };

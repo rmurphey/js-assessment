@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 if ( typeof window === 'undefined' ) {
   require('../../app/count');
   var expect = require('chai').expect;
@@ -20,7 +21,7 @@ describe('counter', function () {
 
     if (typeof console === 'undefined') {
       console = {
-        log: undefined
+        log: null
       };
     }
     origConsoleLog = console.log;

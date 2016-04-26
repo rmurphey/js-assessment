@@ -23,10 +23,15 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "mocha -R spec 'tests/app'"
+    "test": "mocha -R spec 'tests/app'",
+    "lint": "eslint --quiet tests/app",
+    "lint-warn": "eslint tests/app"
   },
   "bugs": {
     "url": "https://github.com/rmurphey/js-assessment/issues"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "eslint": "^2.8.0"
+  }
 }

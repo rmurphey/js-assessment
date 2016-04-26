@@ -6,18 +6,18 @@ if ( typeof window === 'undefined' ) {
 
 describe('recursion', function() {
   var fileData = {
-    dir : 'app',
-    files : [
+    dir: 'app',
+    files: [
       'index.html',
       {
-        dir : 'js',
+        dir: 'js',
         files: [
           'main.js',
           'app.js',
           'misc.js',
           {
-            dir : 'vendor',
-            files : [
+            dir: 'vendor',
+            files: [
               'jquery.js',
               'underscore.js'
             ]
@@ -25,8 +25,8 @@ describe('recursion', function() {
         ]
       },
       {
-        dir : 'css',
-        files : [
+        dir: 'css',
+        files: [
           'reset.css',
           'main.css'
         ]
