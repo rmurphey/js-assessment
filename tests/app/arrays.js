@@ -21,6 +21,7 @@ describe('arrays', function() {
 
   it('you should be able to remove all instances of a value from an array', function() {
     a.push(2); // Make sure the value appears more than one time
+    a.push(2); // Make sure the value appears more than one time in a row
     var result = arraysAnswers.remove(a, 2);
 
     expect(result).to.have.length(3);
