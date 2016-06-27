@@ -147,8 +147,9 @@ describe('functions', function() {
     var result, yFibonacci;
 
     function fibonacci(n, self) {
-      return n < 1 ? 0 : n <= 2 ? 1
-        : self(n - 2, self) + self(n - 1, self);
+      return n < 1 ? 0 : (n <= 2
+          ? 1
+          : self(n - 2, self) + self(n - 1, self));
     }
 
     yFibonacci = functionsAnswers.yCombinator(fibonacci);
@@ -156,5 +157,5 @@ describe('functions', function() {
 
     expect(typeof result).to.eql('number');
     expect(result).to.eql(21);
-  })
+  });
 });
