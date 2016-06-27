@@ -35,5 +35,9 @@ exports.functionsAnswers = {
 
   curryIt: function(fn) {
 
+  },
+
+  yCombinator: function (fn) {
+
   }
 };

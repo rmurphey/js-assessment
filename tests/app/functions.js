@@ -142,4 +142,20 @@ describe('functions', function() {
     expect(typeof result).to.eql('number');
     expect(result).to.eql(curryMe(a, b, c));
   });
+
+  it('you should be able to create y-combinator function for self-recurring fibonacci function', function () {
+    var result, yFibonacci;
+
+    function fibonacci(n, self) {
+      return n < 1 ? 0 : (n <= 2
+          ? 1
+          : self(n - 2, self) + self(n - 1, self));
+    }
+
+    yFibonacci = functionsAnswers.yCombinator(fibonacci);
+    result = yFibonacci(8);
+
+    expect(typeof result).to.eql('number');
+    expect(result).to.eql(21);
+  });
 });
