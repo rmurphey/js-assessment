@@ -11,12 +11,15 @@ describe('arrays', function() {
   });
 
   it('you should be able to determine the location of an item in an array', function() {
+    a.push(3);
     expect(arraysAnswers.indexOf(a, 3)).to.eql(2);
     expect(arraysAnswers.indexOf(a, 5)).to.eql(-1);
   });
 
   it('you should be able to sum the items of an array', function() {
     expect(arraysAnswers.sum(a)).to.eql(10);
+    a.push(-2);
+    expect(arraysAnswers.sum(a)).to.eql(8);
   });
 
   it('you should be able to remove all instances of a value from an array', function() {
@@ -61,6 +64,8 @@ describe('arrays', function() {
 
     expect(result).to.have.length(5);
     expect(result[0]).to.eql(10);
+    expect(result[1]).to.eql(1);
+    expect(result[4]).to.eql(4);
   });
 
   it('you should be able to remove the first item of an array', function () {
@@ -102,6 +107,9 @@ describe('arrays', function() {
 
     expect(result).to.have.length(4);
     expect(result.join(' ')).to.eql('1 4 9 16');
+    a.push(-2);
+    result = arraysAnswers.square(a);
+    expect(result.join(' ')).to.eql('1 4 9 16 4');
   });
 
   it('you should be able to find all occurrences of an item in an array', function() {
