@@ -94,6 +94,19 @@ exports.arraysAnswers = {
     return duplicates;
   },
 
+  // TODO: explore, understand and fix
+  // duplicates: function(arr) {
+  //   var duplicates = [];
+  //   for (var i = 0; i < arr.length; i++) {
+  //     if (arr[Math.abs(arr[i])] > 0) {
+  //       arr[Math.abs(arr[i])] = -arr[Math.abs(arr[i])];
+  //     } else {
+  //       duplicates.push(Math.abs(arr[i]));
+  //     }
+  //   }
+  //   return duplicates;
+  // },
+
   square: function(arr) {
     var squared = arr.map(function(number) {
       return Math.pow(number, 2);
