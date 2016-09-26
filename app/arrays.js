@@ -82,30 +82,33 @@ exports.arraysAnswers = {
   },
 
   // ripe for rewrite
-  duplicates: function(arr) {
-    var duplicates = [];
-    for (var i = 0; i < arr.length; i++) {
-      for (var j = i + 1; j < arr.length; j++) {
-        if (arr[i] === arr[j] && !duplicates.includes(arr[j])) {
-          duplicates.push(arr[i]);
-        }
-      }
-    }
-    return duplicates;
-  },
-
-  // TODO: explore, understand and fix
   // duplicates: function(arr) {
   //   var duplicates = [];
   //   for (var i = 0; i < arr.length; i++) {
-  //     if (arr[Math.abs(arr[i])] > 0) {
-  //       arr[Math.abs(arr[i])] = -arr[Math.abs(arr[i])];
-  //     } else {
-  //       duplicates.push(Math.abs(arr[i]));
+  //     for (var j = i + 1; j < arr.length; j++) {
+  //       if (arr[i] === arr[j] && !duplicates.includes(arr[j])) {
+  //         duplicates.push(arr[i]);
+  //       }
   //     }
   //   }
   //   return duplicates;
   // },
+
+  // TODO: explore, understand and fix
+  duplicates: function(arr) {
+    var duplicates = [];
+    for (var i = 0; i < arr.length; i++) {
+      // [ 1, 2, 4, 4, 3, 3, 1, 5, 3 ]
+      if (arr[Math.abs(arr[i])] > 0) {
+        // arr[arr[0]] === arr[1] > 0 -> yes
+        // arr[1] = -arr[1]
+        arr[Math.abs(arr[i])] = -arr[Math.abs(arr[i])];
+      } else if (!duplicates.includes(arr[i])) {
+        duplicates.push(Math.abs(arr[i]));
+      }
+    }
+    return duplicates;
+  },
 
   square: function(arr) {
     var squared = arr.map(function(number) {
