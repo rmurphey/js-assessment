@@ -29,17 +29,44 @@ return listOfFiles;
 
   },
 
+permute: function(arr) {
+    
+    var temp = [];
+    var answer = [];
+
+    function logResult() {
+      answer.push(
+        temp.slice()
+      );
+    }
+
+    function doIt() {
+      var i;
+      var len;
+      var item;
+
+      for (i = 0, len = arr.length; i < len; i++) {
+        
+        item = arr.splice(i, 1)[0];
 
      
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         );
-     
-  },
+        temp.push(item);
 
-  fibonacci: function(n) {
+        if (arr.length) {
+         
+          doIt();
+        } else {
+        
+          logResult();
+        }
 
-  },
+        arr.splice(i, 0, item);
+        temp.pop();
+      }
 
-  validParentheses: function(n) {
+      return answer;
+    }
 
+    return doIt();
   }
 };
