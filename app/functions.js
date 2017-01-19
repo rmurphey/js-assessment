@@ -10,11 +10,13 @@ exports.functionsAnswers = {
   },
 
   functionFunction: function(str) {
-
+    return function(x){
+        return str +', '+ x;
+    }
   },
 
   makeClosures: function(arr, fn) {
-
+    
   },
 
   partial: function(fn, str1, str2) {
