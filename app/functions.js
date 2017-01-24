@@ -10,6 +10,7 @@ exports.functionsAnswers = {
   },
 
   functionFunction: function(str) {
+      // just adding a comment here
     return function(x){
         return str +', '+ x;
     }
