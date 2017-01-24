@@ -6,6 +6,7 @@ exports.regexAnswers = {
   },
 
   containsRepeatingLetter: function(str) {
+    // regex to find consecutive repeating letters
     return /([a-zA-Z]).*?\1/.test(str);
   },
 
