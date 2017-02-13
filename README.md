@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # PROS UI Software Engineer Pre-Interview Questions
 
 The repo includes a set of tests that assess your JavaScript skills, based
