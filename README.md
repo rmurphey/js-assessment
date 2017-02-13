@@ -25,7 +25,10 @@ To use the tests, you will need to install Node -- you can do this via the
 [Homebrew](http://mxcl.github.com/homebrew/) if you are on a Mac.
 
 Note that on Windows, there are some reports that you will need to restart
-after installing Node - see #12.
+after installing Node - see #12. Also, you may need to alter package.json, namely change:
+```    "test": "mocha -R spec 'tests/app'",```
+to
+```    "test": "mocha -R spec tests\app",```
 
 You can clone or download this repo. Once you have done so, from the root
 directory of the repo, run:
@@ -47,12 +50,6 @@ You can also run (most of) the tests on the command line:
     npm test
 
 The command line runner is a work in progress; contributions welcome :)
-
-You can also develop with live-reload and grunt-watch if that's your thing:
-
-    npm install -g grunt-cli
-    npm install
-    grunt develop
 
 ## I need help!
 
