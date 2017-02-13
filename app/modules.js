@@ -1,10 +1,7 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+exports = typeof window === 'undefined' ? global : window;
 
-define(function() {
-  return {
-    createModule : function(str1, str2) {
+exports.modulesAnswers = {
+  createModule: function(str1, str2) {
 
-    }
-  };
-});
-
+  }
+};

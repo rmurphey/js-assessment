@@ -1,36 +1,26 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+/* eslint-disable */
+exports = typeof window === 'undefined' ? global : window;
 
 /**
  * This file defines an object with some methods. Some of these methods are
  * populated incorrectly; your job is to fix them. Other methods are not
  * populated at all; your job is to fill them out.
  */
-define(function() {
-  return {
-    globals : function() {
-      myObject = {
-        name : 'Jory'
-      };
 
-      return myObject;
-    },
+exports.bestPracticesAnswers = {
+  globals: function() {
+    myObject = {
+      name: 'Jory'
+    };
 
-    functions : function(flag) {
-      if (flag) {
-        function getValue() { return 'a'; }
-      } else {
-        function getValue() { return 'b'; }
-      }
+    return myObject;
+  },
 
-      return getValue();
-    },
+  parseInt: function(num) {
+    return parseInt(num);
+  },
 
-    parseInt : function(num) {
-      return parseInt(num);
-    },
+  identity: function(val1, val2) {
 
-    identity : function(val1, val2) {
-
-    }
-  };
-});
+  }
+};

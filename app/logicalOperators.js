@@ -1,13 +1,11 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+exports = typeof window === 'undefined' ? global : window;
 
-define(function() {
-  return {
-    or : function(a, b) {
+exports.logicalOperatorsAnswers = {
+  or: function(a, b) {
 
-    },
+  },
 
-    and : function(a, b) {
+  and: function(a, b) {
 
-    }
-  };
-});
+  }
+};

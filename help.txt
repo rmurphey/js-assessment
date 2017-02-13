@@ -1,8 +1,8 @@
-To work on the tests, open a browser and visit http://localhost:{{port}}.
+To work on the tests, open a browser and visit http://{{host}}:{{port}}.
 
 The tests are in files in the tests/app directory; you will need to fill out
-the answers in the corresponding files in the app directory, reloading your
-browser to see whether the tests are passing.
+the answers in the corresponding files in the app directory, your browser will 
+reload when you save the files.
 
 For some tests, the instructions will be more involved; in those cases, the
 inline comments should give you the details you need.

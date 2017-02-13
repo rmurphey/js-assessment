@@ -1,13 +1,19 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+exports = typeof window === 'undefined' ? global : window;
 
-define(function() {
-  return {
-    listFiles: function(data, dirName) {
+exports.recursionAnswers = {
+  listFiles: function(data, dirName) {
 
-    },
+  },
 
-    permute: function(arr) {
+  permute: function(arr) {
 
-    }
-  };
-});
+  },
+
+  fibonacci: function(n) {
+
+  },
+
+  validParentheses: function(n) {
+
+  }
+};

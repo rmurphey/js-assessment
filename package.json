@@ -2,35 +2,36 @@
   "author": "Rebecca Murphey <rmurphey@gmail.com> (http://rmurphey.com)",
   "name": "js-assessment",
   "description": "A test-driven assessment of JavaScript skills",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "homepage": "http://rmurphey.com",
   "repository": {
     "type": "git",
     "url": "git://github.com/rmurphey/js-assessment.git"
   },
   "engines": {
-    "node": "~0.6.8"
+    "node": "0.12.x"
   },
   "dependencies": {
-    "express" : "2.5.x",
-    "underscore" : "1.3.x",
-    "amdefine" : "0.0.2",
-    "expect.js" : "0.1.2",
-    "grunt" : "~0.4.0",
-    "grunt-contrib-jshint" : "~0.1.0"
-  },
-  "devDependencies": {
-    "mocha" : "1.2.x",
-    "requirejs" : "1.0.x",
-    "grunt-contrib-livereload" : "~0.1.2",
-    "grunt-contrib-watch" : "~0.4.4"
+    "backbone": "^1.1.2",
+    "browser-sync": "^2.8.2",
+    "chai": "^2.3.0",
+    "expect.js": "0.1.2",
+    "jquery": "^1.11.0",
+    "mocha": "^2.2.4",
+    "sinon": "^1.14.1",
+    "underscore": "1.8.x"
   },
   "scripts": {
-    "start": "node bin/serve",
-    "test": "./node_modules/mocha/bin/mocha -R spec tests/runner.js"
+    "start": "node index.js",
+    "test": "mocha -R spec 'tests/app'",
+    "lint": "eslint --quiet tests/app app",
+    "lint-warn": "eslint tests/app app"
   },
-  "bin" : "bin/serve",
-  "bugs" : {
-    "url" : "https://github.com/rmurphey/js-assessment/issues"
+  "bugs": {
+    "url": "https://github.com/rmurphey/js-assessment/issues"
+  },
+  "private": true,
+  "devDependencies": {
+    "eslint": "^2.8.0"
   }
 }
