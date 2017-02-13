@@ -28,7 +28,7 @@ Note that on Windows, there are some reports that you will need to restart
 after installing Node - see #12. Also, you may need to alter package.json, namely change:
 ```    "test": "mocha -R spec 'tests/app'",```
 to
-```    "test": "mocha -R spec tests\app",```
+```    "test": "mocha -R spec tests\\app",```. This may apply to the other npm scripts as well.
 
 You can clone or download this repo. Once you have done so, from the root
 directory of the repo, run:
