@@ -85,7 +85,7 @@ describe('arrays', function() {
     expect(result.join(' ')).to.eql('1 2 z 3 4');
   });
 
-  it('you should be able to count the occurences of an item in an array', function() {
+  it('you should be able to count the occurrences of an item in an array', function() {
     var result = arraysAnswers.count([ 1, 2, 4, 4, 3, 4, 3 ], 4);
 
     expect(result).to.eql(3);
