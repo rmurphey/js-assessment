@@ -1,2 +1,7 @@
 npm-debug.log
 node_modules/
+
+# Editors stuff
+.idea
+.project
+.vscode
