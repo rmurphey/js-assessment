@@ -1,21 +1,40 @@
-[![Build Status](https://travis-ci.org/rmurphey/js-assessment.svg?branch=master)](https://travis-ci.org/rmurphey/js-assessment)
+# PROS UI Software Engineer Pre-Interview Questions
 
-# A test-driven JS assessment
+The repo includes a set of tests that assess your JavaScript skills, based
+on Rebecca Murphey's js-assessment framework.
 
-This repo includes a set of tests that can be used to assess the skills of
-a candidate for a JavaScript position, or to evaluate and improve one's own
-skills.
+# For Interviewees
+
+## How do I begin?
+
+1. If you don't have a Github account, [sign up](https://github.com/signup/free)!
+2. Fork this repo to your own Github repo
+3. Clone the repo locally on your own computer
+4. Implement the functions in each of the scripts located in the `app/` dir
+5. Test your results as described below
+6. Commit your changes to your personal Github repo (No need to submit a pull request)
+7. Email us the link to your repo so that we can review your results
+
+Note: You may receive notifications that your repo has been followed or forked by a PROS employee.
+These actions are simply part of the review process.
 
 ## I want to work on the tests; what do I do?
-To use the tests, you will need to install [Node](https://nodejs.org/). Note
-that on Windows, there are some reports that you will need to restart
-after installing Node - see #12.
+
+To use the tests, you will need to install Node -- you can do this via the
+[download page](http://nodejs.org/#download) or using
+[Homebrew](http://mxcl.github.com/homebrew/) if you are on a Mac.
+
+Note that on Windows, there are some reports that you will need to restart
+after installing Node - see #12. Also, you may need to alter package.json, namely change:
+```    "test": "mocha -R spec 'tests/app'",```
+to
+```    "test": "mocha -R spec tests\\app",```. This may apply to the other npm scripts as well.
 
 You can clone or download this repo. Once you have done so, from the root
 directory of the repo, run:
 
     npm install
-    npm start
+    node bin/serve
 
 You can then view the tests in your browser at
 [http://localhost:4444](http://localhost:4444).
@@ -32,10 +51,14 @@ You can also run (most of) the tests on the command line:
 
 The command line runner is a work in progress; contributions welcome :)
 
-### Available dependencies
+## I need help!
 
-The repo includes jQuery, Backbone, and Underscore. You can use these
-libraries when writing your solutions!
+There may be friendly folks willing to help you in \#js-assessment or
+\#jshotline on freenode IRC.
+
+---
+
+# For PROS Employees
 
 ## I want to contribute tests; what do I do?
 
@@ -47,12 +70,18 @@ solution to the corresponding file in `app/`. Finally, it would be great if you
 could update the [answers](https://github.com/rmurphey/js-assessment-answers)
 as well.
 
-If you're not sure how or where to add a test, please open an issue.
+Any substantial contributions will be duly credited in the readme, as well as
+of course in the git commit log.
 
 ### Data-driven tests
 
 If your tests need data that can be fetched via XHR, stick a `.json` file in
 the `data` directory; you can access it at `/data/<filename>.json`.
+
+### Available dependencies
+
+The repo includes jQuery, Backbone, Underscore, and RequireJS. If there's other
+stuff you'd find useful, you can put it in the `lib` directory.
 
 ## I want to see the answers!
 
@@ -66,9 +95,10 @@ keep them up to date.
 
 ## I hate \<some technology you've chosen\>
 
-This repo uses [Mocha](https://github.com/mochajs/mocha) and
-[Chai](http://chaijs.com/) for the tests themselves. It uses the BDD style for authoring tests.
-If this doesn't suit you, please fork away, or, better, submit a pull request that lets
+This repo uses [RequireJS](http://requirejs.org) for dependency management and
+[Mocha](http://visionmedia.github.com/mocha/) and [expect.js](https://github.com/LearnBoost/expect.js/blob/master/README.md)
+for the tests themselves. It uses the BDD style for authoring tests. If this
+doesn't suit you, please fork away, or, better, submit a pull request that lets
 this be more flexible than it currently is.
 
 # Todos
@@ -79,9 +109,19 @@ requests welcome!
 
 # License
 
-Copyright &copy; 2012-2016 Rebecca Murphey with many thanks to several
-[contributors](https://github.com/rmurphey/js-assessment/graphs/contributors).
+Portions Copyright &copy; 2012 PROS, Inc.
+Core Framework Copyright &copy; 2012 Rebecca Murphey. [Core Repo](https://github.com/rmurphey/js-assessment)
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+This work is licensed under the [Creative Commons Attribution-Share Alike 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
+license. You are free to share and remix the work, and to use it for commercial
+purposes under the following conditions:
 
-This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+- *Attribution* — You must attribute the work in the manner specified by the
+  author or licensor (but not in any way that suggests that they endorse you or
+  your use of the work).
+- *Share Alike* — If you alter, transform, or build upon this work, you may
+  distribute the resulting work only under the same or similar license to this
+  one.
+
+Any of these conditions can be waived if you get permission from the copyright
+holder.
