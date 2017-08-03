@@ -11,6 +11,7 @@ describe('arrays', function() {
   });
 
   it('you should be able to determine the location of an item in an array', function() {
+    expect(arraysAnswers.indexOf(a, 1)).to.eql(0);
     expect(arraysAnswers.indexOf(a, 3)).to.eql(2);
     expect(arraysAnswers.indexOf(a, 5)).to.eql(-1);
   });
