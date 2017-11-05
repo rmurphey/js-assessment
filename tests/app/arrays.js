@@ -1,4 +1,4 @@
-if ( typeof window === 'undefined' ) {
+if (typeof window === 'undefined') {
   require('../../app/arrays');
   var expect = require('chai').expect;
 }
@@ -7,7 +7,7 @@ describe('arrays', function() {
   var a;
 
   beforeEach(function() {
-    a = [ 1, 2, 3, 4 ];
+    a = [1, 2, 3, 4];
   });
 
   it('you should be able to determine the location of an item in an array', function() {
@@ -29,9 +29,9 @@ describe('arrays', function() {
   });
 
   it('you should be able to remove all instances of a value from an array, returning the original array', function() {
-    a.splice( 1, 0, 2 );
-    a.push( 2 );
-    a.push( 2 );
+    a.splice(1, 0, 2);
+    a.push(2);
+    a.push(2);
 
     var result = arraysAnswers.removeWithoutCopy(a, 2);
 
@@ -56,14 +56,14 @@ describe('arrays', function() {
     expect(result.join(' ')).to.eql('1 2 3');
   });
 
-  it('you should be able to add an item to the beginning of an array', function () {
+  it('you should be able to add an item to the beginning of an array', function() {
     var result = arraysAnswers.prepend(a, 10);
 
     expect(result).to.have.length(5);
     expect(result[0]).to.eql(10);
   });
 
-  it('you should be able to remove the first item of an array', function () {
+  it('you should be able to remove the first item of an array', function() {
     var result = arraysAnswers.curtail(a);
 
     expect(result).to.have.length(3);
@@ -71,7 +71,7 @@ describe('arrays', function() {
   });
 
   it('you should be able to join together two arrays', function() {
-    var c = [ 'a', 'b', 'c', 1 ];
+    var c = ['a', 'b', 'c', 1];
     var result = arraysAnswers.concat(a, c);
 
     expect(result).to.have.length(8);
@@ -86,13 +86,13 @@ describe('arrays', function() {
   });
 
   it('you should be able to count the occurences of an item in an array', function() {
-    var result = arraysAnswers.count([ 1, 2, 4, 4, 3, 4, 3 ], 4);
+    var result = arraysAnswers.count([1, 2, 4, 4, 3, 4, 3], 4);
 
     expect(result).to.eql(3);
   });
 
   it('you should be able to find duplicates in an array', function() {
-    var result = arraysAnswers.duplicates([ 1, 2, 4, 4, 3, 3, 1, 5, 3 ]);
+    var result = arraysAnswers.duplicates([1, 2, 4, 4, 3, 3, 1, 5, 3]);
 
     expect(result.sort()).to.eql([1, 3, 4]);
   });
@@ -105,9 +105,8 @@ describe('arrays', function() {
   });
 
   it('you should be able to find all occurrences of an item in an array', function() {
-    var result = arraysAnswers.findAllOccurrences([ 1, 2, 3, 4, 5, 6, 1, 7], 1);
+    var result = arraysAnswers.findAllOccurrences([1, 2, 3, 4, 5, 6, 1, 7], 1);
 
     expect(result.sort().join(' ')).to.eql('0 6');
   });
-
 });
