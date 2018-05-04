@@ -44,11 +44,16 @@ exports.arraysAnswers = {
   },
 
   curtail: function(arr) {
+    const newArray = arr;
+    newArray.shift();
 
+    return newArray;
   },
 
   concat: function(arr1, arr2) {
+    const newArray = arr1.concat(arr2);
 
+    return newArray;
   },
 
   insert: function(arr, item, index) {
