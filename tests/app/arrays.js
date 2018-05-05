@@ -3,7 +3,7 @@ if ( typeof window === 'undefined' ) {
   var expect = require('chai').expect;
 }
 
-describe.only('arrays', function() {
+describe('arrays', function() {
   var a;
 
   beforeEach(function() {

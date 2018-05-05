@@ -3,7 +3,7 @@ if ( typeof window === 'undefined' ) {
   var expect = require('chai').expect;
 }
 
-describe('strings', function() {
+describe.only('strings', function() {
   it('you should be able to reduce duplicate characters to a desired minimum', function() {
     expect(stringsAnswers.reduceString('aaaabbbb', 2)).to.eql('aabb');
     expect(stringsAnswers.reduceString('xaaabbbb', 2)).to.eql('xaabb');
