@@ -57,15 +57,34 @@ exports.arraysAnswers = {
   },
 
   insert: function(arr, item, index) {
+    const newArray = arr;
+    newArray.splice(index, 0, item);
 
+    return newArray;
   },
 
   count: function(arr, item) {
+    const total = arr.filter(ele => ele === item);
 
+    return total.length;
   },
 
   duplicates: function(arr) {
+    const newArray = arr;
+    const sorted = arr.sort((a, b) => a - b);
+    let value;
+    const array = [];
 
+    for (i=0; i<sorted.length-1; i++) {
+      if(value === sorted[i]) {
+        array.push(sorted[i]);
+        return;
+      }
+      value = sorted[i];
+      return;
+    }
+
+    return array;
   },
 
   square: function(arr) {
