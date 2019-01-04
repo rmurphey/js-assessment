@@ -10,6 +10,25 @@ exports.flowControlAnswers = {
     //
     // otherwise the function should return the number, or false if no number
     // was provided or the value provided is not a number
+    var isMultipleOfFive = num % 5 === 0;
+    var isMultipleOfThree = num % 3 === 0;
 
+    if (isMultipleOfThree && isMultipleOfFive) {
+      return 'fizzbuzz';
+    }
+
+    if (isMultipleOfThree) {
+      return 'fizz';
+    }
+
+    if (isMultipleOfFive) {
+      return 'buzz';
+    }
+
+    if (isNaN(num)) {
+      return false;
+    }
+
+    return num;
   }
 };
