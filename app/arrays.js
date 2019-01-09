@@ -14,7 +14,12 @@ exports.arraysAnswers = {
   },
 
   remove: function(arr, item) {
-
+    var index = arr.indexOf(item);
+    while(index >=0) {
+      arr.splice(index,1);
+      index = arr.indexOf(item);
+    }
+    return arr;
   },
 
   removeWithoutCopy: function(arr, item) {
