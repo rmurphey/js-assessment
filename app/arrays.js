@@ -18,7 +18,10 @@ exports.arraysAnswers = {
   },
 
   removeWithoutCopy: function(arr, item) {
-    // TODO: add logic for this
+    while (arr.indexOf(item) !== -1) {
+      arr.splice(arr.indexOf(item), 1);
+    }
+
     return arr;
   },
 
@@ -63,8 +66,15 @@ exports.arraysAnswers = {
   },
 
   duplicates: function(arr) {
-    // TODO: add logic for this
-    return arr;
+    const duplicates = [];
+
+    arr.forEach((item, index, array) => {
+      if (array.indexOf(item, index + 1) !== -1 && duplicates.indexOf(item) === -1) {
+        duplicates.push(item);
+      }
+    });
+
+    return duplicates;
   },
 
   square: function(arr) {
@@ -74,7 +84,14 @@ exports.arraysAnswers = {
   },
 
   findAllOccurrences: function(arr, target) {
-    // TODO: add logic for this
-    return arr;
+    const occurences = [];
+
+    arr.forEach((item, index) => {
+      if (item === target) {
+        occurences.push(index);
+      }
+    });
+
+    return occurences;
   }
 };
