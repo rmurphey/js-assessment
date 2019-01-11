@@ -28,6 +28,7 @@ exports.regexAnswers = {
   },
 
   isUSD: function(str) {
-    return (/^\$\d{1,3}(?:,?\d{3})*(?:\.\d{2})?$p/).test(str);
+    console.log(str);
+    return (/^\$\d{1,3}(?:,?\d{3})*(?:\.\d{2})?$/).test(str);
   }
 };
