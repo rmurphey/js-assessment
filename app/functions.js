@@ -16,14 +16,12 @@ exports.functionsAnswers = {
   },
 
   makeClosures: function(arr, fn) {
-    // TODO: add logic for this
-    return arr;
+    return arr.map((item) => {
+      return () => fn(item);
+    });
   },
 
-  partial: function(fn, str1, str2) {
-    // TODO: add logic for this
-    return fn;
-  },
+  partial: (fn, str1, str2) => (str) => fn(str1, str2, str),
 
   useArguments: function() {
     var args = [...arguments];
@@ -39,13 +37,10 @@ exports.functionsAnswers = {
     return fn.apply(this, args.slice(1));
   },
 
-  partialUsingArguments: function(fn) {
-    // TODO: add logic for this
-    return fn;
-  },
+  partialUsingArguments: (fn, ...args) => (...args2) => fn(...args, ...args2),
 
   curryIt: function(fn) {
-    // TODO: add logic for this
-    return fn;
+    // TODO: I hate currying
+    return fn();
   }
 };
