@@ -2,6 +2,8 @@
 
 此Repository包含了一系列的測試檔案，用以評量或加強對於Javascript的瞭解程度。
 
+> 此版本為 Camel2243 修改開發環境及個人淺薄解答
+
 ## 如何使用
 首先，必須要在您的機器上安裝Node.js，
 [官網下載連結](http://nodejs.org/#download) 。
@@ -26,6 +28,9 @@
 
 開啟`tests/app/`中的檔案為測試檔，每一個`it('中文敘述', function() { //測試區塊})`都是一個測試。`beforeEach`是每個測試的前置作業，範例：`array.js`中的beforeEach設定了`a=[1,2,3,4];`，也就是所有測試都可以取得一個名為`a`的陣列（當然，他們是互相獨立的）。`answers`對應的就是`app/`裡相同檔名的模組，範例：`answers.indexOf()`對應的就是`indexOf:`的程式區段。而您的目標是完成每個測試區塊中的expect條件，多數expect呼叫方式很直觀，如有不懂可至[expect.js](https://github.com/LearnBoost/expect.js/blob/master/README.md)找尋更多使用範例。
 
+## live reload with vscode
+
+    ext install livereload
 
 # License
 注意：此repo是從[js-assessment](https://github.com/rmurphey/js-assessment) fork而來。
