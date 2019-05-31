@@ -20,8 +20,8 @@
     "grunt-contrib-jshint": "~0.1.0"
   },
   "devDependencies": {
-    "mocha" : "1.2.x",
-    "requirejs" : "1.0.x"
+    "mocha" : "6.1.4",
+    "requirejs" : "2.3.6"
   },
   "scripts": {
     "start": "node bin/serve",
