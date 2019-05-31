@@ -5,17 +5,17 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
  * populated incorrectly; your job is to fix them. Other methods are not
  * populated at all; your job is to fill them out.
  */
-define(function() {
+define(function () {
   return {
-    globals : function() {
-      myObject = {
-        name : 'Jory'
+    globals: function () {
+      var myObject = {
+        name: 'Jory'
       };
 
       return myObject;
     },
 
-    functions : function(flag) {
+    functions: function (flag) {
       if (flag) {
         function getValue() { return 'a'; }
       } else {
@@ -25,12 +25,12 @@ define(function() {
       return getValue();
     },
 
-    parseInt : function(num) {
-      return parseInt(num);
+    parseInt: function (num) {
+      return parseInt(num, 10);
     },
 
-    identity : function(val1, val2) {
-
+    identity: function (val1, val2) {
+      return val1 === val2;
     }
   };
 });
