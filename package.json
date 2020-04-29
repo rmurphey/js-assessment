@@ -16,7 +16,7 @@
     "browser-sync": "^2.8.2",
     "chai": "^2.3.0",
     "expect.js": "0.1.2",
-    "jquery": "^1.11.0",
+    "jquery": "^3.5.0",
     "mocha": "^2.2.4",
     "sinon": "^1.14.1",
     "underscore": "1.8.x"
