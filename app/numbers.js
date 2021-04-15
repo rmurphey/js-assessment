@@ -14,6 +14,7 @@ exports.numbersAnswers = {
   },
 
   multiply: function(a, b) {
-
+    let result = a * b;
+    return result.toFixed(1);
   }
 };
