@@ -32,6 +32,8 @@
   },
   "private": true,
   "devDependencies": {
-    "eslint": "^2.8.0"
+    "eslint": "^2.8.0",
+    "babel-eslint": "^8.2.6",
+    "eslint-plugin-import": "^2.24.1"
   }
 }
